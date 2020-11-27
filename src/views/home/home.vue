@@ -1,16 +1,17 @@
 <template>
-  <div class="home">
-    <header>
-      <img src="" alt="" srcset="" />
-      <NavBar></NavBar>
-    </header>
+  <header>
+    <img src="" alt="" srcset="" />
+    <NavBar></NavBar>
+  </header>
+  <div class="main">
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import NavBar from "./components/navbar";
+import NavBar from "@/components/NavBar/navbar";
 export default {
-  name: "Home",
+  name: "PublicPage",
   data() {
     return {};
   },
