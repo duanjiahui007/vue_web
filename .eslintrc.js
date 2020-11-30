@@ -8,6 +8,7 @@ module.exports = {
     parser: "babel-eslint"
   },
   rules: {
+    "comma-dangle": "off", // 对象字面量项尾不能有逗号
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
   }
