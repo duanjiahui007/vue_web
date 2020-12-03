@@ -1,22 +1,22 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "@/views/home/home";
+import Main from "@/main/index";
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
-    redirect: "/index",
-    meta: { title: "主页" },
+    name: "main",
+    component: Main,
+    redirect: "/home",
+    meta: { title: "home" },
     children: [
       {
-        path: "index",
-        component: () => import("@/views/index/index"),
-        meta: { title: "主页" }
+        path: "home",
+        component: () => import("@/views/home/index"),
+        meta: { title: "home" }
       },
       {
         path: "online",
         component: () => import("@/views/online/index"),
-        meta: { title: "" }
+        meta: { title: "online" }
       }
     ]
   }

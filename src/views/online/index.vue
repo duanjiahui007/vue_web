@@ -1,8 +1,13 @@
 <template>
-  <div>sxxx</div>
+  <div class="onlinePage">
+    online
+  </div>
 </template>
+
 <script>
 export default {
-  name: "online"
+  name: "onlinePage"
 };
 </script>
+
+<style lang="less" scoped></style>

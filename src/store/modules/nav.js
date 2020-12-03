@@ -1,5 +1,5 @@
 const state = {
-  headrePath: "/"
+  headrePath: "home"
 };
 
 const mutations = {

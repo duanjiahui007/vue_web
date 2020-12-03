@@ -1,8 +1,12 @@
 <template>
   <div class="navBody">
     <nav class="navMenu">
-      <div class="menu" :class="{ onSelect: '/' === isPath }" data-path="/">
-        <router-link to="/">Hone</router-link>
+      <div
+        class="menu"
+        :class="{ onSelect: 'home' === isPath }"
+        data-path="home"
+      >
+        <router-link to="home">Home</router-link>
       </div>
       <div
         class="menu"
@@ -30,8 +34,16 @@
       </div>
       <div class="line" ref="lines"></div>
     </nav>
-    <div class="login">
+    <div
+      class="login"
+      @click.stop="changeLogin"
+      :class="{ hoverLogin: showLogin }"
+    >
       <div class="loginBtn">log in/log up</div>
+      <div class="selectloifn" v-show="showLogin">
+        <router-link to="home">log in</router-link>
+        <router-link to="online">log up</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -49,7 +61,7 @@ export default {
     function moveLine(event) {
       let ent = event.currentTarget || event.srcElement;
       console.log(ent.dataset.path);
-      store.dispatch("AsyncHeaderPath", ent.dataset.path);
+      store.dispatch("nav/AsyncHeaderPath", ent.dataset.path);
       let child = ent.parentNode.children || ent.parentElement.children;
       for (let n = 0; n < child.length - 1; n++) {
         child[n].classList.remove("onSelect");
@@ -87,11 +99,16 @@ export default {
   },
   data() {
     return {
-      isPath: ""
+      showLogin: false
     };
   },
   created() {
-    this.isPath = this.$store.getters.header;
+    document.body.onclick = () => {
+      this.showLogin = false;
+    };
+    window.addEventListener("resize", () => {
+      this.resetLine();
+    });
   },
   mounted() {
     let adds = document.getElementsByClassName("menu");
@@ -100,6 +117,16 @@ export default {
       adds[i].addEventListener("click", this.moveLine, true);
       adds[i].addEventListener("mouseover", this.mouseLine, true);
       adds[i].addEventListener("mouseout", this.resetLine, true);
+    }
+  },
+  methods: {
+    changeLogin() {
+      this.showLogin = !this.showLogin;
+    }
+  },
+  computed:{
+    isPath(){
+      return this.$store.getters.header
     }
   }
 };
@@ -161,5 +188,73 @@ export default {
   border: 1px solid #1facb1;
   color: #1facd1;
   cursor: pointer;
+  position: relative;
+  transition: all 400ms ease-out;
+  &:hover {
+    background-color: #1facb1;
+    color: #ffff;
+    border-color: #0c6b6e;
+  }
+  &.hoverLogin {
+    background-color: #1facb1;
+    color: #ffff;
+    border-color: #0c6b6e;
+  }
+  .selectloifn {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 6px;
+    color: #24292e;
+    border: 1px solid #e1e4e8;
+    padding: 10px 0 14px;
+    &::before {
+      content: "";
+      display: block;
+      width: 0;
+      position: absolute;
+      border: 12px solid transparent;
+      border-bottom-color: #f3f3f3fa;
+      top: -24px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform-origin: center bottom;
+      transform: scale(0.7);
+    }
+    a {
+      display: block;
+      padding: 0 14px;
+      line-height: 24px;
+      height: 24px;
+      transition: all 600ms ease-in-out;
+      color: #24292e;
+      &:hover {
+        background-color: #1facb1;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1024px) {
+  .navMenu {
+    .menu {
+      font-size: 16px;
+    }
+  }
+  .login {
+    margin-left: 30px;
+    padding: 3 10px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .navBody {
+    display: none;
+  }
 }
 </style>

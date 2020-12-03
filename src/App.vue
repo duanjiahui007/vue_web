@@ -8,5 +8,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  padding-top: 97px;
+}
+
+@media screen and (max-width: 1400px) {
+  #app {
+    padding-top: 60px;
+  }
 }
 </style>

@@ -5,6 +5,9 @@ import store from "./store";
 
 import "./style/index.css";
 
+// iconfont
+import "./assets/iconfont/iconfont.css";
+
 createApp(App)
   .use(store)
   .use(router)
