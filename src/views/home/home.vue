@@ -16,8 +16,8 @@ export default {
     return {};
   },
   components: {
-    NavBar,
-  },
+    NavBar
+  }
 };
 </script>
 
