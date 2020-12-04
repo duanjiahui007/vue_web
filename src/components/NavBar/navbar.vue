@@ -124,9 +124,9 @@ export default {
       this.showLogin = !this.showLogin;
     }
   },
-  computed:{
-    isPath(){
-      return this.$store.getters.header
+  computed: {
+    isPath() {
+      return this.$store.getters.header;
     }
   }
 };

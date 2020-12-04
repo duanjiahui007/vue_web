@@ -1,18 +1,33 @@
-body,ul,ol,dl,dd,p,h1,h2,h3,h4,h5,h6,input,textarea,hr{
+body,ul,ol,dl,dd,p,h1,h2,h3,h4,h5,h6,input,textarea,hr {
     margin: 0;
     padding:0;
 }
-html,body{
+html,body {
     font-family: '微软雅黑',Arial, Helvetica, sans-serif;
 }
-ul,ol{
+/* body::-webkit-scrollbar{
+    width: 6px;
+    height: 4px;
+}
+body::-webkit-scrollbar-track{
+    background:#efefef;
+}
+body::-webkit-scrollbar-thumb{
+    background:#99a9bf;
+    border-radius: 12px;
+} */
+ul,ol {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
-img{
+img {
     display: block;
     border: none;
+}
+i,em,strong  {
+    font-style: normal;
+    font-weight: normal;
 }
