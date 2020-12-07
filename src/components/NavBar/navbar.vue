@@ -46,6 +46,35 @@
       </div>
     </div>
   </div>
+  <div class="minNav">
+    <div class="min-nav-box" @click.stop="changeMobile('nav')">
+      <i class="JS JS-menu" :class="{ selNav: mobileNav }"></i>
+      <div class="menu-box mobile-box" v-show="mobileNav">
+        <router-link to="home" @click="touchDown" data-path="home"
+          >Home</router-link
+        >
+        <router-link to="online" @click="touchDown" data-path="online"
+          >online production</router-link
+        >
+        <router-link to="" @click="touchDown" data-path="model"
+          >resource model</router-link
+        >
+        <router-link to="" @click="touchDown" data-path="personal"
+          >personal center</router-link
+        >
+        <router-link to="" @click="touchDown" data-path="us"
+          >connect us</router-link
+        >
+      </div>
+    </div>
+    <div class="min-login-box" @click.stop="changeMobile('login')">
+      <i class="JS JS-me" :class="{ selLogin: mobileLogin }"></i>
+      <div class="login-box mobile-box" v-show="mobileLogin">
+        <router-link to="">log up</router-link>
+        <router-link to="">log in</router-link>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -99,12 +128,16 @@ export default {
   },
   data() {
     return {
-      showLogin: false
+      showLogin: false,
+      mobileLogin: false,
+      mobileNav: false
     };
   },
   created() {
     document.body.onclick = () => {
       this.showLogin = false;
+      this.mobileLogin = false;
+      this.mobileNav = false;
     };
     window.addEventListener("resize", () => {
       this.resetLine();
@@ -120,8 +153,23 @@ export default {
     }
   },
   methods: {
+    // pc  点击 显示登陆/注册
     changeLogin() {
       this.showLogin = !this.showLogin;
+    },
+    // 移动显示 菜单 登陆/注册
+    changeMobile(val) {
+      if (val === "login") {
+        this.mobileLogin = !this.mobileLogin;
+        this.mobileNav = false;
+      } else {
+        this.mobileNav = !this.mobileNav;
+        this.mobileLogin = false;
+      }
+    },
+    touchDown(event) {
+      let ev = event.currentTarget || event.srcElement;
+      this.$store.dispatch("nav/AsyncHeaderPath", ev.dataset.path);
     }
   },
   computed: {
@@ -133,17 +181,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
+// pc大屏显示
 .navBody {
   height: 100%;
   display: flex;
   align-items: center;
-  -moz-user-select: none; /*火狐*/
-  -webkit-user-select: none; /*webkit浏览器*/
-  -ms-user-select: none; /*IE10*/
-  -khtml-user-select: none; /*早期浏览器*/
-  user-select: none;
 }
-
 .navMenu {
   position: relative;
   display: flex;
@@ -190,6 +233,7 @@ export default {
   cursor: pointer;
   position: relative;
   transition: all 400ms ease-out;
+  font-size: 18px;
   &:hover {
     background-color: #1facb1;
     color: #ffff;
@@ -239,7 +283,60 @@ export default {
     }
   }
 }
-
+// 移动端显示
+.minNav {
+  display: none;
+  i {
+    font-size: 26px;
+    color: #4eb9d9;
+    cursor: pointer;
+  }
+  .min-nav-box,
+  .min-login-box {
+    position: relative;
+    margin-left: 20px;
+  }
+  .selLogin,
+  .selNav {
+    color: #ffffff;
+  }
+  .mobile-box {
+    position: absolute;
+    top: calc(100% + 16px);
+    right: -70%;
+    margin: 0 auto;
+    padding: 10px 15px 14px;
+    background-color: #2a8bb5;
+    border-radius: 5px;
+    a {
+      display: block;
+      color: #ffffff;
+      line-height: 26px;
+      font-size: 14px;
+      border-bottom: 1px solid #4b9ec0;
+      white-space: nowrap;
+    }
+    &::before {
+      content: "";
+      display: block;
+      transform: scaleY(1.4) scaleX(0.8);
+      transform-origin: center bottom;
+      border: 10px solid transparent;
+      border-bottom-color: #2a8bb5;
+      width: 0;
+      position: absolute;
+      top: -20px;
+      left: 70%;
+      margin: 0 auto;
+    }
+  }
+  .login-box {
+    right: -30%;
+    &::before {
+      left: 55%;
+    }
+  }
+}
 @media screen and (max-width: 1400px) and (min-width: 1024px) {
   .navMenu {
     .menu {
@@ -255,6 +352,9 @@ export default {
 @media screen and (max-width: 1024px) {
   .navBody {
     display: none;
+  }
+  .minNav {
+    display: flex;
   }
 }
 </style>

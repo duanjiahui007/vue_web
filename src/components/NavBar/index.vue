@@ -2,23 +2,20 @@
   <header>
     <img :src="logo" alt="JianShi" :srcset="logo_2x" />
     <nav-bar></nav-bar>
-    <min-nav></min-nav>
   </header>
 </template>
 
 <script>
 import NavBar from "./navbar";
-import MinNav from "./minNav";
 import logo from "@/assets/images/home/logo.png";
 import logo_2x from "@/assets/images/home/logo@2x.png";
 export default {
-  name: "header",
+  name: "headerBox",
   data() {
     return { logo, logo_2x };
   },
   components: {
-    NavBar,
-    MinNav
+    NavBar
   }
 };
 </script>
@@ -67,7 +64,28 @@ header {
 
 @media screen and (max-width: 1024px) {
   header {
-    padding: 10px 20px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border-bottom: 1px solid #ffffff;
+    background-image: radial-gradient(
+      circle at center,
+      #e3f1f1 23%,
+      #caf8f7 100%
+    );
+  }
+}
+@media screen and (max-width: 960px) {
+  header {
+    box-shadow: none;
+    border-bottom: 1px solid #ffffff;
+    background-image: radial-gradient(
+      circle at center,
+      #e3f1f1 23%,
+      #caf8f7 100%
+    );
+    img {
+      height: 30px;
+    }
   }
 }
 </style>

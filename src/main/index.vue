@@ -1,13 +1,13 @@
 <template>
-  <head-bar></head-bar>
+  <head-nav></head-nav>
   <main>
     <router-view></router-view>
   </main>
 </template>
 <script>
-import HeadBar from "@/components/NavBar/index";
+import HeadNav from "@/components/NavBar/index";
 export default {
-  name: "PublicPage",
-  components: { HeadBar }
+  name: "publicPage",
+  components: { HeadNav }
 };
 </script>
