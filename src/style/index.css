@@ -31,3 +31,53 @@ i,em,strong  {
     font-style: normal;
     font-weight: normal;
 }
+
+/* 标题 */
+.topic {
+    color: #172945;
+    font-family: "Georgia";
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.1875rem;
+}
+/* 副标题 */
+.level {
+    color: #97a3b7;
+    font-family: "Arial";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 24px;
+    font-size: 14px;
+}
+.level::before,.level::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #e2e4e4;
+    width: 0.390625rem;
+    margin: 0 0.125rem;
+}
+@media screen and (max-width: 1024px){
+    .topic {
+        font-size: .346rem;
+    }
+    .level {
+        font-size: .18666rem;
+    }
+    .level::before,.level::after {
+        width: 1rem;
+    }
+}
+@media screen and (max-width: 960px){
+    .topic {
+        font-size: .53rem;
+        margin-bottom: 0;
+    }
+    .level {
+        font-size: .24rem;
+    }
+    .level::before,.level::after {
+        width: 1rem;
+    }
+}

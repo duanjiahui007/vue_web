@@ -32,8 +32,8 @@
           <p>This is where the success story begins</p>
         </div>
         <div class="banner-play">
-          <div class="play-txt">Create your resume online </div>
-          <div class="play-btn"> <i class="JS JS-into"></i></div>
+          <div class="play-txt">Create your resume online</div>
+          <div class="play-btn"><i class="JS JS-into"></i></div>
         </div>
       </div>
     </div>
@@ -44,21 +44,380 @@
         <div class="min-play-btn"><i class="JS JS-into"></i></div>
       </div>
     </div>
+    <!-- 模板展示 -->
+    <div class="model-show">
+      <div class="model-title">
+        <div class="topic">Hot resume model</div>
+        <div class="level">Massive template one-click application</div>
+      </div>
+      <div class="model-content model-big">
+        <div class="model-swiper">
+          <swiper
+            :slides-per-view="5"
+            navigation
+            @swiper="onSwiper"
+            @slideChange="onSlideChange"
+          >
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            
+           
+
+          </swiper>
+        </div>
+      </div>
+       <div class="model-content model-large">
+        <div class="model-swiper">
+          <swiper
+            :slides-per-view="4"
+            navigation
+            @swiper="onSwiper"
+            @slideChange="onSlideChange"
+          >
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="swiper-items">
+                <div class="items-tip">
+                  <i class="JS JS-hot"></i>
+                  <span>template 1</span>
+                </div>
+                <div class="items-content">
+                  <img :src="model" />
+                </div>
+                <div class="items-foot">
+                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
+                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                </div>
+              </div>
+            </swiper-slide>
+          </swiper>
+        </div>
+      </div>
+      <div class="model-move">
+        <div class="move">read more >>></div>
+      </div>
+    </div>
+    <!-- 模板移动版 迷你 -->
   </div>
 </template>
 <script>
 import grass from "@/assets/images/home/grass.png";
 import cloud from "@/assets/images/home/cloud.png";
 import book from "@/assets/images/home/book.png";
+import model from "@/assets/images/home/model/01.png"
+import "swiper/swiper.less";
+import "swiper/components/effect-fade/effect-fade.less";
+import "swiper/components/navigation/navigation.less";
+import SwiperCore, { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/vue";
+SwiperCore.use([Navigation]);
+
 export default {
   name: "home",
   data() {
-    return { grass, cloud, book };
+    return { 
+      grass, cloud, book, model
+    };
+  },
+  components: {
+    Swiper,
+    SwiperSlide
+  },
+  methods: {
+    onSwiper(swiper) {
+      console.log(swiper);
+    },
+    onSlideChange() {
+      console.log("slide change");
+    }
   }
 };
 </script>
 
 <style scoped lang="less">
+// 广告图
 .banner {
   width: 100%;
   box-sizing: border-box;
@@ -138,7 +497,7 @@ export default {
       font-family: "Georgia";
     }
     .banner-Subtitle {
-      margin-bottom:0.3125rem;
+      margin-bottom: 0.3125rem;
       p {
         color: rgb(124, 136, 156);
         font-size: 0.104167rem;
@@ -150,25 +509,25 @@ export default {
     }
     .banner-play {
       width: 1.510417rem;
-      height:0.328125rem;
+      height: 0.328125rem;
       border-radius: 0.161458rem;
       background-image: linear-gradient(-88deg, #33a9c1 0%, #7ad1e0 99%);
       box-sizing: border-box;
       padding: 0 0.052083rem 0 0.15625rem;
-      display:flex;
+      display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
       .play-txt {
-         color: #ffffff;
-         font-size: 0.083333rem;
+        color: #ffffff;
+        font-size: 0.083333rem;
       }
       .play-btn {
         height: 0.260417rem;
         width: 0.260417rem;
         background-color: #ffffff;
         display: flex;
-        align-items:center;
+        align-items: center;
         justify-content: center;
         border-radius: 50%;
         i {
@@ -181,65 +540,221 @@ export default {
 }
 .min-banner {
   position: relative;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  padding-top: .4rem;
-  padding-bottom: .266rem;
-  background-image: radial-gradient( circle at center, #e3f1f1 23%, #caf8f7 100% );
+  padding-top: 0.75rem;
+  padding-bottom: 0.266rem;
   overflow: hidden;
   .min-ban-play {
     display: flex;
     width: 4rem;
-    height: .88rem;
-    border-radius: .44rem;
-    padding-left: .4rem;
-    padding-right: .0667rem;
+    height: 0.88rem;
+    border-radius: 0.44rem;
+    padding-left: 0.4rem;
+    padding-right: 0.0667rem;
     align-items: center;
     justify-content: space-between;
     background-image: linear-gradient(-88deg, #33a9c1 0%, #7ad1e0 99%);
     position: relative;
     z-index: 6;
-    .min-play-txt{
-      font-size:.24rem;
+    .min-play-txt {
+      font-size: 0.24rem;
       font-family: Arial;
       color: #fefeff;
     }
     .min-play-btn {
-      width: .7466rem;
-      height: .7466rem;
-      border-radius: .3733rem;
+      width: 0.7466rem;
+      height: 0.7466rem;
+      border-radius: 0.3733rem;
       background-color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
       i {
         color: #39a4b7;
-        font-size: .266rem;
+        font-size: 0.266rem;
       }
     }
   }
-  &::before,&::after{
-    content: "";
-    position: absolute ;
-    width: 80%;
-    height: 120%;
-    top: 0;
-    z-index: 3;
-    background-color: #ffffff;
-    border-radius: 50% 50% 0 0;
-  }
   &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
     left: 0;
+    background-color: #ffffff;
+    background-image: url("../../assets/images/home/min-btn-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
   }
-   &::after {
-     right: 0;
-   }
+}
+// 模板展示
+.model-show {
+  padding-top: 0.15625rem;
+  padding-bottom: 0.364583rem;
+  background-image: url("../../assets/images/home/model-bg.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 120% 100%;
+  .model-title {
+    margin-bottom: 0.416667rem;
+  }
+  .model-content {
+    position: relative;
+    padding-bottom: 60px;//
+    .model-swiper {
+      width: 95%;
+      margin: 0 auto;
+      position: relative;
+      /deep/.swiper-container {
+         padding: 0 0.39rem ;
+         &::before,&::after{
+           content:'';
+           position: absolute;
+           width: 0.39rem;
+           height: 100%;
+           background-color: #f5f6f8;
+          //  background-image: url("../../assets/images/home/model-bg.png");
+           top: 0;
+           z-index: 3;
+         }
+         &::before{
+           left:0;
+           background-position: left;
+         }
+         &::after{
+           right:0;
+           background-position: right center;
+         }
+        .swiper-button-prev,.swiper-button-next{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 0.28125rem;
+          height: 0.28125rem;
+          background-color: #f3f5f5;
+          border-radius: 50%;
+          
+        }
+        .swiper-button-prev{
+          left: 5px;
+          transform: rotateZ(180deg);
+          box-shadow:0 -5px 7px 1px #d0d0d0;
+        }
+        .swiper-button-next{
+          right:5px;
+          box-shadow:0 5px7px 1px #d0d0d0 ;
+        }
+        .swiper-button-prev::after,.swiper-button-next::after{
+          content:"\e602";
+          font-family: "JS";
+          font-size: 0.09375rem;
+          color: #6b6d6f;
+        }
+        .swiper-items{
+          width:1.510417rem;
+          height: 2.34375rem;
+          overflow: hidden;
+          margin: 0 auto;
+          padding: 0.104167rem;
+          background-color: #f5f7f7;
+          border: 1px solid #d1d1d7;
+          border-radius: 10px;
+          box-sizing: border-box;
+          .items-tip {
+            i {
+              font-size:0.125rem;
+              color: #fd4141;
+            }
+            span {
+              font-size: 0.083333rem;
+              color: #343435;
+            }
+            display: flex;
+            align-items: center;
+          }
+          .items-content {
+            width: 100%;
+            height: 1.692708rem;
+            overflow: hidden;
+            border-radius: 8px;
+            padding-top: 0.10rem;
+            // box-sizing: border-box;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .items-foot {
+            margin-top:0.10rem;
+            display: flex;
+            >div{
+              margin-right: 0.072917rem;
+              font-size: 0.083333rem;
+              color: #b2c7d4;
+              i {
+                color: #b2c7d4;
+              }
+            }
+          }
+        }
+      }
+        
+    }
+  }
+  .model-large {
+    display: none;
+    .swiper-items {
+      
+    }
+  }
+  .model-move {
+    padding-bottom: 0.208333rem;
+    .move {
+      width: 110px;
+      height: 26px;
+      font-size: 14px;
+      padding: 0 10px;
+      color: #848fa2;
+      border: 1px solid #848fa2;
+      border-radius: 0.104167rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}
+// 模板迷你版 
+.model-min-show {
+
   
 }
 
+@media screen and (max-width:1200px){
+  .model-show {
+    .model-big {
+      display: none;
+    }
+    .model-large {
+      display: block;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
-  .banner { background-image: radial-gradient( circle at center, #e3f1f1 23%, #caf8f7 100% ); }
+  .banner {
+    background-image: radial-gradient(
+      circle at center,
+      #e3f1f1 23%,
+      #caf8f7 100%
+    );
+  }
 }
 @media screen and (max-width: 960px) {
   .banner {
@@ -252,20 +767,23 @@ export default {
       }
     }
   }
+  .min-banner {
+    display: flex;
+  }
 }
 @media screen and (max-width: 750px) {
   .banner {
-    height:4.533rem;
+    height: 4.533rem;
     padding-top: 0.933rem;
     .grass {
       height: 0.975rem;
-      bottom: .64rem;
+      bottom: 0.64rem;
     }
-    .figure{
-      bottom: .64rem;
+    .figure {
+      bottom: 0.64rem;
       .cloud {
         height: 0.79167rem;
-        margin-right: .66rem;
+        margin-right: 0.66rem;
       }
       .book {
         height: 2.48792rem;
