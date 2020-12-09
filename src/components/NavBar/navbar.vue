@@ -138,6 +138,11 @@ export default {
       this.showLogin = false;
       this.mobileLogin = false;
       this.mobileNav = false;
+      // 模板点击方法
+      let dom = document.querySelector(".items-content-check");
+      if (dom) {
+        dom.classList.remove("items-content-check");
+      }
     };
     window.addEventListener("resize", () => {
       this.resetLine();

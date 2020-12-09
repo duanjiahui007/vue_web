@@ -64,12 +64,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -79,12 +88,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -94,12 +112,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -109,12 +136,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -124,12 +160,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -139,12 +184,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -154,12 +208,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -169,12 +232,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -184,12 +256,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -199,22 +280,28 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
-            
-           
-
           </swiper>
         </div>
       </div>
-       <div class="model-content model-large">
+      <div class="model-content model-large">
         <div class="model-swiper">
           <swiper
             :slides-per-view="4"
@@ -228,12 +315,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -243,12 +339,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -258,12 +363,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -273,12 +387,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -288,12 +411,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -303,12 +435,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -318,12 +459,21 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
@@ -333,60 +483,115 @@
                   <i class="JS JS-hot"></i>
                   <span>template 1</span>
                 </div>
-                <div class="items-content">
+                <div class="items-content" @click.stop="lookViews">
                   <img :src="model" />
+                  <div class="min-mantle one"></div>
+                  <div class="min-mantle two"></div>
+                  <div class="mantle">
+                    <div class="btn">View details</div>
+                  </div>
                 </div>
                 <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="swiper-items">
-                <div class="items-tip">
-                  <i class="JS JS-hot"></i>
-                  <span>template 1</span>
-                </div>
-                <div class="items-content">
-                  <img :src="model" />
-                </div>
-                <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="swiper-items">
-                <div class="items-tip">
-                  <i class="JS JS-hot"></i>
-                  <span>template 1</span>
-                </div>
-                <div class="items-content">
-                  <img :src="model" />
-                </div>
-                <div class="items-foot">
-                  <div class="item"><i class="JS JS-stare"></i> <span>2552</span></div>
-                  <div class="item"><i class="JS JS-download"></i> <span>2552</span></div>
+                  <!-- <div class="item">
+                    <i class="JS JS-stare"></i> <span>2552</span>
+                  </div> -->
+                  <div class="item">
+                    <i class="JS JS-download"></i> <span>2552</span>
+                  </div>
                 </div>
               </div>
             </swiper-slide>
           </swiper>
         </div>
       </div>
+      <!-- 模板移动版 迷你 -->
+      <div class="model-min">
+        <div class="model-items">
+          <div class="items-img">
+            <img :src="model" alt="" />
+          </div>
+          <div class="items-tip">
+            Template 01
+          </div>
+          <div class="items-btn">
+            <div class="btn">View details</div>
+          </div>
+        </div>
+        <div class="model-items">
+          <div class="items-img">
+            <img :src="model" alt="" />
+          </div>
+          <div class="items-tip">
+            Template 01
+          </div>
+          <div class="items-btn">
+            <div class="btn">View details</div>
+          </div>
+        </div>
+        <div class="model-items">
+          <div class="items-img">
+            <img :src="model" alt="" />
+          </div>
+          <div class="items-tip">
+            Template 01
+          </div>
+          <div class="items-btn">
+            <div class="btn">View details</div>
+          </div>
+        </div>
+        <div class="model-items">
+          <div class="items-img">
+            <img :src="model" alt="" />
+          </div>
+          <div class="items-tip">
+            Template 01
+          </div>
+          <div class="items-btn">
+            <div class="btn">View details</div>
+          </div>
+        </div>
+      </div>
       <div class="model-move">
         <div class="move">read more >>></div>
       </div>
     </div>
-    <!-- 模板移动版 迷你 -->
+    <!-- 用户反馈-联系我们 -->
+    <div class="user-us-box">
+      <!-- 用户反馈 -->
+      <div class="user-back">
+        <div class="user-image">
+          <img :src="user" alt="" />
+        </div>
+        <div class="user-content">
+          <div class="user-title"></div>
+          <div class="user-list"></div>
+        </div>
+      </div>
+      <!-- 联系我们 -->
+      <div class="contect-us">
+        <div class="us-content">
+          <div class="us-title"></div>
+          <div class="us-list">
+            <div class="us-eg"></div>
+            <div class="us-eg"></div>
+            <div class="us-eg"></div>
+          </div>
+          <div class="us-init"></div>
+        </div>
+        <div class="us-image">
+          <img :src="us" alt="" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 import grass from "@/assets/images/home/grass.png";
 import cloud from "@/assets/images/home/cloud.png";
 import book from "@/assets/images/home/book.png";
-import model from "@/assets/images/home/model/01.png"
+import model from "@/assets/images/home/model/01.png";
+import us from "@/assets/images/home/userUs/us.png";
+import user from "@/assets/images/home/userUs/user.png";
 import "swiper/swiper.less";
 import "swiper/components/effect-fade/effect-fade.less";
 import "swiper/components/navigation/navigation.less";
@@ -397,10 +602,16 @@ SwiperCore.use([Navigation]);
 export default {
   name: "home",
   data() {
-    return { 
-      grass, cloud, book, model
+    return {
+      grass,
+      cloud,
+      book,
+      model,
+      us,
+      user
     };
   },
+  mounted() {},
   components: {
     Swiper,
     SwiperSlide
@@ -411,12 +622,38 @@ export default {
     },
     onSlideChange() {
       console.log("slide change");
+    },
+    // 点击模板
+    lookViews(event) {
+      let oldDom = document.querySelector(".items-content-check");
+      if (oldDom) {
+        oldDom.classList.remove("items-content-check");
+      }
+      let dom = event.currentTarget;
+      dom.classList.add("items-content-check");
     }
   }
 };
 </script>
 
 <style scoped lang="less">
+// 按钮
+.btn {
+  padding: 0.078125rem 0.15625rem;
+  font-size: 0.083333rem;
+  color: #ffffff;
+  border-radius: 0.260417rem;
+  display: inline-block;
+  flex-shrink: 0;
+  filter: drop-shadow(0px 8px 2.5px rgba(255, 203, 91, 0.23));
+  background-color: #ffc34b;
+  &:hover {
+    background-color: #ffcd6a;
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+}
 // 广告图
 .banner {
   width: 100%;
@@ -585,7 +822,7 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: #f3f5f5;
     background-image: url("../../assets/images/home/min-btn-bg.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -605,32 +842,34 @@ export default {
   }
   .model-content {
     position: relative;
-    padding-bottom: 60px;//
+    padding-bottom: 60px; //
     .model-swiper {
       width: 95%;
       margin: 0 auto;
       position: relative;
       /deep/.swiper-container {
-         padding: 0 0.39rem ;
-         &::before,&::after{
-           content:'';
-           position: absolute;
-           width: 0.39rem;
-           height: 100%;
-           background-color: #f5f6f8;
+        padding: 0 0.39rem;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0.39rem;
+          height: 100%;
+          background-color: #f5f6f8;
           //  background-image: url("../../assets/images/home/model-bg.png");
-           top: 0;
-           z-index: 3;
-         }
-         &::before{
-           left:0;
-           background-position: left;
-         }
-         &::after{
-           right:0;
-           background-position: right center;
-         }
-        .swiper-button-prev,.swiper-button-next{
+          top: 0;
+          z-index: 3;
+        }
+        &::before {
+          left: 0;
+          background-position: left;
+        }
+        &::after {
+          right: 0;
+          background-position: right center;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -638,25 +877,25 @@ export default {
           height: 0.28125rem;
           background-color: #f3f5f5;
           border-radius: 50%;
-          
         }
-        .swiper-button-prev{
+        .swiper-button-prev {
           left: 5px;
           transform: rotateZ(180deg);
-          box-shadow:0 -5px 7px 1px #d0d0d0;
+          box-shadow: 0 -5px 7px 1px #d0d0d0;
         }
-        .swiper-button-next{
-          right:5px;
-          box-shadow:0 5px7px 1px #d0d0d0 ;
+        .swiper-button-next {
+          right: 5px;
+          box-shadow: 0 5px7px 1px #d0d0d0;
         }
-        .swiper-button-prev::after,.swiper-button-next::after{
-          content:"\e602";
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+          content: "\e602";
           font-family: "JS";
           font-size: 0.09375rem;
           color: #6b6d6f;
         }
-        .swiper-items{
-          width:1.510417rem;
+        .swiper-items {
+          width: 1.510417rem;
           height: 2.34375rem;
           overflow: hidden;
           margin: 0 auto;
@@ -665,9 +904,10 @@ export default {
           border: 1px solid #d1d1d7;
           border-radius: 10px;
           box-sizing: border-box;
+          position: relative;
           .items-tip {
             i {
-              font-size:0.125rem;
+              font-size: 0.125rem;
               color: #fd4141;
             }
             span {
@@ -680,19 +920,72 @@ export default {
           .items-content {
             width: 100%;
             height: 1.692708rem;
-            overflow: hidden;
+            // overflow: hidden;
             border-radius: 8px;
-            padding-top: 0.10rem;
+            margin-top: 0.1rem;
+            position: relative;
+            cursor: pointer;
+            z-index: 3;
             // box-sizing: border-box;
             img {
               width: 100%;
               height: 100%;
+              border-radius: 8px;
+            }
+            .min-mantle {
+              height: 50%;
+              position: absolute;
+              border-radius: 2px;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+              transition: all 300ms ease-in-out;
+              width: 0;
+            }
+            .one {
+              background-color: rgba(0, 184, 215, 0.16);
+              z-index: -1;
+              top: -0.05rem;
+            }
+            .two {
+              border-radius: 1px;
+              background-color: rgba(0, 184, 215, 0.07);
+              z-index: -2;
+              top: -0.08rem;
+            }
+            .mantle {
+              width: 0;
+              height: 100%;
+              position: absolute;
+              box-shadow: 1px -1px #7d7d7d;
+              left: 0;
+              right: 0;
+              margin: auto;
+              top: 0;
+              z-index: 6;
+              border-radius: 8px;
+              background-color: rgba(255, 255, 255, 0.75);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
+            }
+          }
+          .items-content-check {
+            .one {
+              width: 87%;
+            }
+            .two {
+              width: 72%;
+            }
+            .mantle {
+              width: 100%;
             }
           }
           .items-foot {
-            margin-top:0.10rem;
+            margin-top: 0.1rem;
             display: flex;
-            >div{
+            > div {
               margin-right: 0.072917rem;
               font-size: 0.083333rem;
               color: #b2c7d4;
@@ -703,13 +996,23 @@ export default {
           }
         }
       }
-        
     }
   }
   .model-large {
     display: none;
-    .swiper-items {
-      
+    .model-swiper {
+      /deep/ .swiper-container {
+        .swiper-items {
+          width: 1.666667rem;
+          height: 2.604167rem;
+          .items-content {
+            height: 2rem;
+          }
+          .items-foot {
+            margin-top: 0.01rem;
+          }
+        }
+      }
     }
   }
   .model-move {
@@ -729,14 +1032,65 @@ export default {
       cursor: pointer;
     }
   }
+  // 模板迷你版
+  .model-min {
+    display: none;
+    padding: 0 0.426rem;
+    .model-items {
+      margin-bottom: 0.266rem;
+      padding: 4px;
+      width: 4.266rem;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      border-radius: 5px;
+      .items-img {
+        width: 100%;
+        height: 3.866rem;
+        overflow: hidden;
+        border-radius: 5px;
+        img {
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+      .items-tip {
+        font-size: 0.346rem;
+        color: #343435;
+        line-height: 0.746rem;
+        text-indent: 5px;
+      }
+      .items-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0.133rem;
+        padding-bottom: 0.32rem;
+        .btn {
+          font-size: 0.24rem;
+          padding: 0.2rem 0.293rem;
+          border-radius: 0.466rem;
+          filter: drop-shadow(0px 0.106rem 2.5px rgba(255, 203, 91, 0.23));
+        }
+      }
+    }
+  }
 }
-// 模板迷你版 
-.model-min-show {
-
-  
+// 用户反馈 和联系我们的盒子
+.user-us-box {
+  padding-top: 0.625rem;
+  background-image: url("../../assets/images/home/userUs/user-us-bj.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  > div {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+// 用户反馈
+.user-back {
 }
 
-@media screen and (max-width:1200px){
+@media screen and (max-width: 1200px) {
   .model-show {
     .model-big {
       display: none;
@@ -769,6 +1123,22 @@ export default {
   }
   .min-banner {
     display: flex;
+    background-color: #f3f5f5;
+  }
+  .model-show {
+    background-color: #f3f5f5;
+    background-image: none;
+    .model-large {
+      display: none;
+    }
+    .model-move {
+      display: none;
+    }
+    .model-min {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
   }
 }
 @media screen and (max-width: 750px) {
