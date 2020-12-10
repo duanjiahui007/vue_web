@@ -563,23 +563,179 @@
           <img :src="user" alt="" />
         </div>
         <div class="user-content">
-          <div class="user-title"></div>
-          <div class="user-list"></div>
+          <div class="user-title">
+            User feedback
+            <div class="line"></div>
+          </div>
+          <div class="user-list">
+            <div class="list-itme">
+              <div class="item-img">
+                <img :src="user2" alt="avter" />
+                <i class="JS JS-msg"></i>
+              </div>
+              <div class="item-content">
+                <h4>Aore</h4>
+                <p>
+                  This is the generator, it's really easy to use, especially
+                  good!This is the generator, it's really easy to use,
+                  especially good!
+                </p>
+              </div>
+            </div>
+            <div class="list-itme">
+              <div class="item-img">
+                <img :src="user2" alt="avter" />
+                <i class="JS JS-msg"></i>
+              </div>
+              <div class="item-content">
+                <h4>Aore</h4>
+                <p>
+                  This is the generator, it's really easy to use, especially
+                  good!
+                </p>
+              </div>
+            </div>
+            <div class="list-itme">
+              <div class="item-img">
+                <img :src="user2" alt="avter" />
+                <i class="JS JS-msg"></i>
+              </div>
+              <div class="item-content">
+                <h4>Aore</h4>
+                <p>
+                  This is the generator, it's really easy to use, especially
+                  good!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- 联系我们 -->
       <div class="contect-us">
         <div class="us-content">
-          <div class="us-title"></div>
-          <div class="us-list">
-            <div class="us-eg"></div>
-            <div class="us-eg"></div>
-            <div class="us-eg"></div>
+          <div class="us-title">
+            Connect us
+            <div class="line"></div>
           </div>
-          <div class="us-init"></div>
+          <div class="us-list">
+            <div class="us-eg">
+              <i class="JS JS-phone"></i>
+              <span>86+55842265152</span>
+            </div>
+            <div class="us-eg">
+              <i class="JS JS-email"></i>
+              <span>86556448@168.com</span>
+            </div>
+            <div class="us-eg">
+              <i class="JS JS-gps"></i>
+              <span>NewYork, us </span>
+            </div>
+          </div>
+          <div class="us-init">
+            <div class="init-txt">Click into</div>
+            <i class="JS JS-into"></i>
+          </div>
         </div>
         <div class="us-image">
           <img :src="us" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- 移动端 用户反馈 -->
+    <div class="min-user-us-box">
+      <div class="title">
+        <div class="topic">User feedback</div>
+        <div class="level">Users' comments on us</div>
+      </div>
+      <div class="user-back">
+        <div class="user-content">
+          <div class="user-list">
+            <div class="list-itme">
+              <div class="item-img">
+                <img :src="user2" alt="avter" />
+                <i class="JS JS-msg"></i>
+              </div>
+              <div class="item-content">
+                <h4>Aore</h4>
+                <p>
+                  This is the generator, it's really easy to use, especially
+                  good!This is the generator, it's really easy to use,
+                  especially good!
+                </p>
+              </div>
+            </div>
+            <div class="list-itme">
+              <div class="item-img">
+                <img :src="user2" alt="avter" />
+                <i class="JS JS-msg"></i>
+              </div>
+              <div class="item-content">
+                <h4>Aore</h4>
+                <p>
+                  This is the generator, it's really easy to use, especially
+                  good!
+                </p>
+              </div>
+            </div>
+            <div class="list-itme">
+              <div class="item-img">
+                <img :src="user2" alt="avter" />
+                <i class="JS JS-msg"></i>
+              </div>
+              <div class="item-content">
+                <h4>Aore</h4>
+                <p>
+                  This is the generator, it's really easy to use, especially
+                  good! This is the generator, it's really easy to use,
+                  especially good! This is the generator, it's really easy to
+                  use, especially good!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 制作功能 -->
+    <div class="production">
+      <div class="title">
+        <div class="topic">Online resume production feature</div>
+        <div class="level">Get ready for your next job</div>
+      </div>
+      <div class="prod-content">
+        <div class="item">
+          <div class="item-img">
+            <img :src="copy1" alt="" />
+          </div>
+          <div class="item-mssage">
+            <div class="item-tip">Change template with one key</div>
+            <div class="item-cont">
+              Massive template, one key can switch, different styles at will
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-img">
+            <img :src="copy2" alt="" />
+          </div>
+          <div class="item-mssage">
+            <div class="item-tip">Change template with one key</div>
+            <div class="item-cont">
+              Massive template, one key can switch, different styles at will
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-img">
+            <img :src="copy3" alt="" />
+          </div>
+          <div class="item-mssage">
+            <div class="item-tip">Change template with one key</div>
+            <div class="item-cont">
+              Massive template, one key can switch, different styles at will
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -592,6 +748,15 @@ import book from "@/assets/images/home/book.png";
 import model from "@/assets/images/home/model/01.png";
 import us from "@/assets/images/home/userUs/us.png";
 import user from "@/assets/images/home/userUs/user.png";
+// 头像
+import user1 from "@/assets/images/home/userUs/av.jpg";
+import user2 from "@/assets/images/home/userUs/avm.jpg";
+import user3 from "@/assets/images/home/userUs/avt.jpg";
+// 制作
+import copy1 from "@/assets/images/home/production/copy1.png";
+import copy2 from "@/assets/images/home/production/copy2.png";
+import copy3 from "@/assets/images/home/production/copy3.png";
+
 import "swiper/swiper.less";
 import "swiper/components/effect-fade/effect-fade.less";
 import "swiper/components/navigation/navigation.less";
@@ -608,7 +773,13 @@ export default {
       book,
       model,
       us,
-      user
+      user,
+      user1,
+      user2,
+      user3,
+      copy1,
+      copy2,
+      copy3
     };
   },
   mounted() {},
@@ -1078,16 +1249,220 @@ export default {
 // 用户反馈 和联系我们的盒子
 .user-us-box {
   padding-top: 0.625rem;
+  padding-bottom: 0.989583rem;
   background-image: url("../../assets/images/home/userUs/user-us-bj.png");
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 0.15625rem;
   > div {
     width: 95%;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.667rem 0 0.833333rem;
+    box-sizing: border-box;
   }
 }
 // 用户反馈
 .user-back {
+  margin-bottom: 1.25rem !important;
+  .user-image {
+    width: 2.71875rem;
+    height: 2.057292rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+  }
+  .user-content {
+    width: 2.729167rem;
+    height: 2.057292rem;
+    .user-title {
+      position: relative;
+      font-size: 0.177083rem;
+      line-height: 0.395833rem;
+      color: #172945;
+      font-family: Georgia;
+      margin-bottom: 0.15625rem;
+      .line {
+        height: 1px;
+        width: 0.463542rem;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #67c7d8;
+      }
+    }
+    .user-list {
+      padding: 0 0.052083rem;
+      .list-itme {
+        display: flex;
+        margin-bottom: 0.114583rem;
+        .item-img {
+          width: 40px;
+          height: 40px;
+          position: relative;
+          margin-right: 10px;
+          flex-shrink: 0;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+          i {
+            color: #fdc85c;
+            font-size: 20px;
+            position: absolute;
+            left: -15%;
+            top: -20%;
+            transform: rotateY(180deg);
+          }
+        }
+        .item-content {
+          font-family: "Alibaba Pu Hui Ti R";
+          h4 {
+            line-height: 24px;
+            font-size: 18px;
+            color: #3c495e;
+          }
+          p {
+            line-height: 24px;
+            font-size: 14px;
+            color: #9da7b8;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+.contect-us {
+  .us-content {
+    width: 1.875rem;
+    height: 1.692708rem;
+    .us-title {
+      position: relative;
+      font-size: 0.177083rem;
+      line-height: 0.395833rem;
+      color: #172945;
+      font-family: Georgia;
+      margin-bottom: 0.15625rem;
+      .line {
+        height: 1px;
+        width: 0.46875rem;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #67c7d8;
+      }
+    }
+    .us-list {
+      .us-eg {
+        margin-bottom: 0.145833rem;
+        display: flex;
+        align-items: flex-end;
+        i {
+          font-size: 20px;
+          color: #fdc85c;
+          margin-right: 14px;
+        }
+        span {
+          color: #566986;
+          font-size: 14px;
+        }
+      }
+    }
+    .us-init {
+      width: 0.9375rem;
+      height: 0.260417rem;
+      border-radius: 0.15625rem;
+      color: #ffffff;
+      background-image: linear-gradient(-88deg, #33a9c1 0%, #7ad1e0 99%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .init-txt {
+        font-size: 0.083333rem;
+      }
+      i {
+        font-size: 0.083333rem;
+        margin-left: 0.0625rem;
+      }
+    }
+  }
+  .us-image {
+    width: 2.729167rem;
+    height: 1.692708rem;
+    img {
+      height: 100%;
+    }
+  }
+}
+// 用户反馈-移动版
+.min-user-us-box {
+  padding: 0 0.426rem;
+  background-color: #f3f5f5;
+  padding-bottom: 0.266rem;
+  display: none;
+  .title {
+    margin-bottom: 0.266rem;
+  }
+  .user-back {
+    margin-bottom: 0 !important;
+    .user-content {
+      width: 100%;
+      height: auto;
+      .user-list {
+        .list-itme {
+          background-color: #ffffff;
+          border-radius: 0.1333rem;
+          padding: 0.33rem 0.466rem;
+          margin-bottom: 0.266rem;
+        }
+      }
+    }
+  }
+}
+// 制作功能
+.production {
+  .title {
+    margin-bottom: 0.364583rem;
+  }
+  .prod-content {
+    padding: 0 0.75rem;
+    display: flex;
+    justify-content: space-around;
+    .item {
+      width: 1.25rem;
+      text-align: center;
+      .item-img {
+        margin-bottom: 0.260417rem;
+        img {
+          width: 0.833333rem;
+          margin: 0 auto;
+        }
+      }
+      .item-mssage {
+        font-family: "Microsoft Ya Hei";
+        .item-tip {
+          font-size: 0.114583rem;
+          line-height: 0.15625rem;
+          color: #4b5454;
+          font-weight: bold;
+          margin-bottom: 0.15625rem;
+        }
+        .item-cont {
+          font-size: 0.09375rem;
+          line-height: 0.145833rem;
+          color: #999999;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1097,6 +1472,29 @@ export default {
     }
     .model-large {
       display: block;
+    }
+  }
+  .user-back {
+    .user-content {
+      .user-list {
+        .list-itme {
+          .items-img {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+          }
+          .item-content {
+            h4 {
+              line-height: 20px;
+              font-size: 14px;
+            }
+            p {
+              line-height: 22px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -1138,6 +1536,47 @@ export default {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+    }
+  }
+  .user-us-box {
+    display: none;
+  }
+  .min-user-us-box {
+    display: block;
+  }
+  .production {
+    background-color: #f3f5f5;
+    padding-bottom: 0.933rem;
+    .prod-content {
+      padding: 0 0.426rem;
+      .item {
+        width: 2.533rem;
+        .item-img {
+          width: 1.733rem;
+          height: 1.733rem;
+          border-radius: 50%;
+          margin: 0 auto;
+          background-color: #e3f1f1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 0.2666rem;
+          img {
+            width: 1.2rem;
+          }
+        }
+        .item-mssage {
+          .item-tip {
+            font-size: 0.306rem;
+            line-height: 0.4rem;
+            color: #4b5454;
+            font-weight: normal;
+          }
+          .item-cont {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
