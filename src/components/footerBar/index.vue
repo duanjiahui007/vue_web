@@ -100,9 +100,9 @@ footer {
 }
 @media screen and (max-width: 960px) {
   footer {
-    padding: 0.4rem 0 0.2933rem;
-    background-image: none;
-    background-color: #30b7cd;
+    padding: 0.4rem 0 0.2933rem !important;
+    background-image: none !important;
+    background-color: #30b7cd !important;
     .links {
       margin-bottom: 0.2666rem;
       i {
