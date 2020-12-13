@@ -14,6 +14,7 @@
   -ms-user-select: none; /*IE10*/
   -khtml-user-select: none; /*早期浏览器*/
   user-select: none;
+  position: relative;
 }
 
 @media screen and (max-width: 1400px) {

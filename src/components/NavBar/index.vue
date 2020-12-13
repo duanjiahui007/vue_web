@@ -1,7 +1,7 @@
 <template>
   <header>
     <img :src="logo" alt="JianShi" :srcset="logo_2x" />
-    <nav-bar></nav-bar>
+    <nav-bar :pageLogin="sign"></nav-bar>
   </header>
 </template>
 
@@ -11,6 +11,12 @@ import logo from "@/assets/images/home/logo.png";
 import logo_2x from "@/assets/images/home/logo@2x.png";
 export default {
   name: "headerBox",
+  props: {
+    sign: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return { logo, logo_2x };
   },

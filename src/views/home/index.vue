@@ -570,7 +570,7 @@
           <div class="user-list">
             <div class="list-itme">
               <div class="item-img">
-                <img :src="user2" alt="avter" />
+                <img :src="user1" alt="avter" />
                 <i class="JS JS-msg"></i>
               </div>
               <div class="item-content">
@@ -597,7 +597,7 @@
             </div>
             <div class="list-itme">
               <div class="item-img">
-                <img :src="user2" alt="avter" />
+                <img :src="user3" alt="avter" />
                 <i class="JS JS-msg"></i>
               </div>
               <div class="item-content">
@@ -653,7 +653,7 @@
           <div class="user-list">
             <div class="list-itme">
               <div class="item-img">
-                <img :src="user2" alt="avter" />
+                <img :src="user1" alt="avter" />
                 <i class="JS JS-msg"></i>
               </div>
               <div class="item-content">
@@ -680,7 +680,7 @@
             </div>
             <div class="list-itme">
               <div class="item-img">
-                <img :src="user2" alt="avter" />
+                <img :src="user3" alt="avter" />
                 <i class="JS JS-msg"></i>
               </div>
               <div class="item-content">
@@ -720,9 +720,10 @@
             <img :src="copy2" alt="" />
           </div>
           <div class="item-mssage">
-            <div class="item-tip">Change template with one key</div>
+            <div class="item-tip">automated composition</div>
             <div class="item-cont">
-              Massive template, one key can switch, different styles at will
+              Just fill in the basic information, the program can complete
+              beautiful typesetting
             </div>
           </div>
         </div>
@@ -731,9 +732,10 @@
             <img :src="copy3" alt="" />
           </div>
           <div class="item-mssage">
-            <div class="item-tip">Change template with one key</div>
+            <div class="item-tip">The One-Click downloaded</div>
             <div class="item-cont">
-              Massive template, one key can switch, different styles at will
+              Complete the resume, one click download, print delivery convenient
+              and fast
             </div>
           </div>
         </div>
@@ -757,6 +759,7 @@ import copy1 from "@/assets/images/home/production/copy1.png";
 import copy2 from "@/assets/images/home/production/copy2.png";
 import copy3 from "@/assets/images/home/production/copy3.png";
 
+// 轮播图
 import "swiper/swiper.less";
 import "swiper/components/effect-fade/effect-fade.less";
 import "swiper/components/navigation/navigation.less";
@@ -1429,6 +1432,7 @@ export default {
 }
 // 制作功能
 .production {
+  padding-bottom: 0.364583rem;
   .title {
     margin-bottom: 0.364583rem;
   }
@@ -1437,7 +1441,7 @@ export default {
     display: flex;
     justify-content: space-around;
     .item {
-      width: 1.25rem;
+      width: 1.614583rem;
       text-align: center;
       .item-img {
         margin-bottom: 0.260417rem;
@@ -1546,7 +1550,7 @@ export default {
   }
   .production {
     background-color: #f3f5f5;
-    padding-bottom: 0.933rem;
+    padding-bottom: 1.2rem;
     .prod-content {
       padding: 0 0.426rem;
       .item {

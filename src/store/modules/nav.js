@@ -1,5 +1,6 @@
+import { getStrong, setStrong } from "@/utils/localstrong.js";
 const state = {
-  headrePath: "home"
+  headrePath: getStrong() ? getStrong() : "home"
 };
 
 const mutations = {
@@ -10,6 +11,7 @@ const mutations = {
 
 const actions = {
   AsyncHeaderPath({ commit }, data) {
+    setStrong(data);
     commit("setHeaderPath", data);
   }
 };

@@ -19,6 +19,16 @@ const routes = [
         meta: { title: "online" }
       }
     ]
+  },
+  {
+    path: "/signIn",
+    component: () => import("@/views/login/index"),
+    meta: { title: "signIn" }
+  },
+  {
+    path: "/signUp",
+    component: () => import("@/views/login/index"),
+    meta: { title: "signUp" }
   }
 ];
 

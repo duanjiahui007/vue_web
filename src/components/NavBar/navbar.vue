@@ -37,12 +37,16 @@
     <div
       class="login"
       @click.stop="changeLogin"
-      :class="{ hoverLogin: showLogin }"
+      :class="{ hoverLogin: showLogin || pageLogin }"
     >
-      <div class="loginBtn">log in/log up</div>
+      <div class="loginBtn">sign in/sign up</div>
       <div class="selectloifn" v-show="showLogin">
-        <router-link to="home">log in</router-link>
-        <router-link to="online">log up</router-link>
+        <router-link to="/signIn" @click="touchDown" data-path="signIn"
+          >sign in</router-link
+        >
+        <router-link to="/signUp" @click="touchDown" data-path="signUp"
+          >sign up</router-link
+        >
       </div>
     </div>
   </div>
@@ -70,8 +74,12 @@
     <div class="min-login-box" @click.stop="changeMobile('login')">
       <i class="JS JS-me" :class="{ selLogin: mobileLogin }"></i>
       <div class="login-box mobile-box" v-show="mobileLogin">
-        <router-link to="">log up</router-link>
-        <router-link to="">log in</router-link>
+        <router-link to="/signIn" @click="touchDown" data-path="signIn"
+          >sign in</router-link
+        >
+        <router-link to="/signUp" @click="touchDown" data-path="signUp"
+          >sign up</router-link
+        >
       </div>
     </div>
   </div>
@@ -82,6 +90,12 @@ import { ref } from "vue";
 import { useStore } from "vuex";
 export default {
   name: "navbar",
+  props: {
+    pageLogin: {
+      type: Boolean,
+      default: false
+    }
+  },
   setup() {
     // line 位置移动
     let lines = ref(null);
@@ -89,7 +103,6 @@ export default {
     // 点击
     function moveLine(event) {
       let ent = event.currentTarget || event.srcElement;
-      console.log(ent.dataset.path);
       store.dispatch("nav/AsyncHeaderPath", ent.dataset.path);
       let child = ent.parentNode.children || ent.parentElement.children;
       for (let n = 0; n < child.length - 1; n++) {
@@ -116,12 +129,16 @@ export default {
     // 鼠标移开
     function resetLine() {
       let ent = document.querySelector(".onSelect");
-      let left = ent.offsetLeft;
-      let w = ent.offsetWidth;
-      let lineW = w * 0.8;
-      let ofLeft = (w - lineW) / 2;
-      lines.value.style.left = left + ofLeft + "px";
-      lines.value.style.width = lineW + "px";
+      if (ent) {
+        let left = ent.offsetLeft;
+        let w = ent.offsetWidth;
+        let lineW = w * 0.8;
+        let ofLeft = (w - lineW) / 2;
+        lines.value.style.left = left + ofLeft + "px";
+        lines.value.style.width = lineW + "px";
+      } else {
+        lines.value ? (lines.value.style.width = 0) : console.log(lines.value);
+      }
     }
 
     return { moveLine, lines, resetLine, mouseLine };
@@ -179,6 +196,7 @@ export default {
   },
   computed: {
     isPath() {
+      console.log(this.$store.getters.header);
       return this.$store.getters.header;
     }
   }
@@ -206,6 +224,10 @@ export default {
     cursor: pointer;
     a {
       color: #172945;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
     }
     &:hover a {
       color: #1facb1;
@@ -240,14 +262,14 @@ export default {
   transition: all 400ms ease-out;
   font-size: 18px;
   &:hover {
-    background-color: #1facb1;
+    background-image: linear-gradient(-88deg, #33a9c1 0%, #7ad1e0 99%);
     color: #ffff;
-    border-color: #0c6b6e;
+    border-color: #33a9c1;
   }
   &.hoverLogin {
-    background-color: #1facb1;
+    background-image: linear-gradient(-88deg, #33a9c1 0%, #7ad1e0 99%);
     color: #ffff;
-    border-color: #0c6b6e;
+    border-color: #33a9c1;
   }
   .selectloifn {
     position: absolute;
