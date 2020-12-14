@@ -26,7 +26,9 @@
           </a-form-item>
         </a-form>
       </div>
-      <div class="online-image online-count"></div>
+      <div class="online-image online-count">
+        <image-upload></image-upload>
+      </div>
       <div class="online-next">
         <a-button
           type="primary"
@@ -37,14 +39,12 @@
         >
       </div>
     </div>
-    <a-button @click="AddNum"> 点击</a-button>
-    <a-button @click="DelNum"> 后退</a-button>
-    online
   </div>
 </template>
 
 <script>
 import TimeAxis from "./components/TimeAxis.vue";
+import ImageUpload from "./components/uploadImage.vue";
 export default {
   name: "onlinePage",
   data() {
@@ -66,20 +66,10 @@ export default {
       }
     };
   },
-  methods: {
-    AddNum() {
-      if (this.Bnum < 6) {
-        this.Bnum++;
-      }
-    },
-    DelNum() {
-      if (this.Bnum > 1) {
-        this.Bnum--;
-      }
-    }
-  },
+  methods: {},
   components: {
-    TimeAxis
+    TimeAxis,
+    ImageUpload
   }
 };
 </script>
