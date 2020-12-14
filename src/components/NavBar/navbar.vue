@@ -141,7 +141,7 @@ export default {
         lines.value.style.left = left + ofLeft + "px";
         lines.value.style.width = lineW + "px";
       } else {
-        lines.value ? (lines.value.style.width = 0) : console.log(lines.value);
+        lines.value ? (lines.value.style.width = 0) : lines.value;
       }
     }
 

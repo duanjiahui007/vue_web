@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 // 按需引入ant design ui库
 // import  "./plugins/ant.js";
-import { Button, message, Form, Input } from "ant-design-vue";
+import { Button, message, Form, Input  } from "ant-design-vue";
 // 公共样式
 import "./style/index.css";
 // 自适应

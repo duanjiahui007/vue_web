@@ -42,7 +42,7 @@ const routes = [
   },
   {
     path: "/signUp",
-    component: () => import("@/views/login/index"),
+    component: () => import("@/views/login/signUp"),
     meta: { title: "signUp" }
   }
 ];

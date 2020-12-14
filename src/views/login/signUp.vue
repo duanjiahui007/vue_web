@@ -6,15 +6,23 @@
         <h4>{{ title }}</h4>
         <p v-html="erTip"></p>
         <a-form layout="vertical" :model="form" class="form-box">
-          <a-form-item label="ID/Email">
+          <a-form-item label="Name" class="itemName">
             <a-input
-              v-model:value="form.email"
-              placeholder="email@168.com"
+              v-model:value="form.surname"
+              placeholder="surname"
+              allowClear
+            />
+            <a-input
+              v-model:value="form.name"
+              placeholder="name"
               allowClear
             />
           </a-form-item>
-          <a-form-item label="Password">
-            <a-input-password v-model:value="form.pwd" allowClear />
+          <a-form-item label="Email">
+            <a-input v-model:value="form.email" allowClear />
+          </a-form-item>
+          <a-form-item label="Telephone">
+            <a-input v-model:value="form.phone" allowClear />
           </a-form-item>
           <a-form-item class="btnItem">
             <a-button type="primary" shape="round" :loading="loading"
@@ -25,9 +33,9 @@
       </div>
       <div class="line"><span>Other Ways</span></div>
       <div class="login-mode">
-        <div class="btnLink"><i class="JS JS--twitter"></i> <span>Twitter</span>  </div>
-        <div class="btnLink"><i class="JS JS-facebooBig"></i> <span>Facebook</span></div>
-        <div class="btnLink"><i class="JS JS-linkedin"></i><span>Linkedin</span></div>
+        <div class="btnLink"><i class="JS JS--twitter"></i> Twitter</div>
+        <div class="btnLink"><i class="JS JS-facebooBig"></i>Facebook</div>
+        <div class="btnLink"><i class="JS JS-linkedin"></i>Linkedin</div>
         <p>
           By signing up, you agree to our terms of service, privacy policy and
           email
@@ -54,11 +62,13 @@ export default {
   data() {
     return {
       form: {
+        name: "",
+        surname:"",
         email: "",
-        pwd: ""
+        phone:""
       },
-      title: "Welcome to Log on",
-      erTip: `If you do not already have an account, please <a href="#/signUp">sign up</a> now `,
+      title: "Free Registration",
+      erTip: `An existing account? <a href="#/signIn">In the login </a>  `,
       loading: false
     };
   },
@@ -126,6 +136,16 @@ export default {
                 background-color: #eff1f1;
                 font-size: 16px;
               }
+            }
+          }
+        }
+        .itemName {
+          /deep/.ant-form-item-children {
+            display: flex;
+            justify-content: space-between;
+            >span {
+              flex-basis: 45%;
+              flex-shrink: 0;
             }
           }
         }
