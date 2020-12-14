@@ -61,19 +61,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.sign-header {
-  box-shadow: none;
-}
-.sign-footer {
-  padding-top: 1.578125rem;
-  background-image: url("../../assets/images/home/footer/footer-bj-other.png");
-  background-color: transparent;
-  position: absolute;
-  z-index: 40;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
 .login {
   background-color: #f3f5f5;
   padding-top: 20px;
@@ -93,36 +80,28 @@ export default {
         font-size: 0.166667rem;
         line-height: 0.4375rem;
         color: #172945;
-        font-family: "Georgia";
       }
       p {
         font-size: 0.072917rem;
         color: #7c889c;
-        font-family: "Arial";
         margin-bottom: 0.177083rem;
         a {
           color: #08cdee;
         }
       }
       .form-box {
-        padding: 0 0.9375rem 0 0.25rem;
-        box-sizing: border-box;
-        .ant-form-item {
-          .ant-form-item-control {
-            .ant-input-affix-wrapper {
-              background-color: #eff1f1;
-              line-height: 0.260417rem;
-              /deep/.ant-input {
-                background-color: #eff1f1;
-                font-size: 16px;
-              }
-            }
-          }
-        }
         .btnItem {
           margin-bottom: 0;
           /deep/.ant-form-item-control {
             text-align: center;
+          }
+          /deep/.ant-btn-round {
+            padding: 14px 24px;
+            font-size: 0.083333rem;
+            border-radius: 0.208333rem;
+            box-sizing: content-box;
+            line-height: 1;
+            height: auto;
           }
         }
       }
@@ -146,6 +125,7 @@ export default {
         justify-content: flex-start;
         padding-left: 7%;
         margin-top: 0.208333rem;
+        cursor: pointer;
         i {
           font-size: 20px;
           margin-right: 0.052083rem;

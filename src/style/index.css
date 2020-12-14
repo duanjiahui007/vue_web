@@ -2,8 +2,14 @@ body,ul,ol,dl,dd,p,h1,h2,h3,h4,h5,h6,input,textarea,hr {
     margin: 0;
     padding:0;
 }
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Georgia";
+}
+p {
+    font-family: "Arial";
+}
 html,body {
-    font-family: '微软雅黑',Arial, Helvetica, sans-serif;
+    font-family: "Georgia" '微软雅黑',Arial, Helvetica, sans-serif;
 }
 /* body::-webkit-scrollbar{
     width: 6px;
@@ -80,4 +86,53 @@ i,em,strong  {
     .level::before,.level::after {
         width: 1rem;
     }
+}
+
+/*  头部  底部  */
+.sign-header {
+    box-shadow: none;
+}
+.sign-footer {
+    padding-top: 1.578125rem!important;
+    background-image: url("../assets/images/home/footer/footer-bj-other.png")!important;
+    background-color: transparent;
+    position: absolute;
+    z-index: 40;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* next Btn */
+.NextBtn {
+    background-color: #37bbd1;
+    border-color: #37bbd1;
+    height: .286458rem;
+    min-width: 105px;
+    min-height: 32px;
+    width: .78125rem;
+    font-size: .09375rem;
+}
+.NextBtn:hover {
+    background-color: #4dd1e9;
+    border-color: #4dd1e9;
+}
+.NextBtn:active{
+    background-color: #2bb0c7;
+    border-color: #2bb0c7;
+}
+
+/* 侧边表单 */
+.form-box {
+    padding: 0 0.9375rem 0 0.25rem;
+    box-sizing: border-box;
+}
+.form-box .ant-form-item  .ant-form-item-control .ant-input-affix-wrapper{
+
+    background-color: #eff1f1;
+    line-height: 0.260417rem;
+}
+.form-box .ant-form-item  .ant-form-item-control .ant-input-affix-wrapper /deep/.ant-input {
+    background-color: #eff1f1;
+    font-size: 16px;
 }

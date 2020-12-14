@@ -6,14 +6,14 @@
         :class="{ onSelect: 'home' === isPath }"
         data-path="home"
       >
-        <router-link to="home">Home</router-link>
+        <router-link to="/home">Home</router-link>
       </div>
       <div
         class="menu"
         :class="{ onSelect: 'online' === isPath }"
         data-path="online"
       >
-        <router-link to="online">online production</router-link>
+        <router-link to="/other/online">online production</router-link>
       </div>
       <div
         class="menu"
@@ -54,10 +54,10 @@
     <div class="min-nav-box" @click.stop="changeMobile('nav')">
       <i class="JS JS-menu" :class="{ selNav: mobileNav }"></i>
       <div class="menu-box mobile-box" v-show="mobileNav">
-        <router-link to="home" @click="touchDown" data-path="home"
+        <router-link to="/home" @click="touchDown" data-path="home"
           >Home</router-link
         >
-        <router-link to="online" @click="touchDown" data-path="online"
+        <router-link to="/other/online" @click="touchDown" data-path="online"
           >online production</router-link
         >
         <router-link to="" @click="touchDown" data-path="model"
@@ -113,8 +113,10 @@ export default {
       let w = ent.offsetWidth;
       let lineW = w * 0.8;
       let ofLeft = (w - lineW) / 2;
-      lines.value.style.left = left + ofLeft + "px";
-      lines.value.style.width = lineW + "px";
+      if (lines.value) {
+        lines.value.style.left = left + ofLeft + "px";
+        lines.value.style.width = lineW + "px";
+      }
     }
     // 鼠标移上
     function mouseLine(event) {
@@ -123,13 +125,15 @@ export default {
       let w = ent.offsetWidth;
       let lineW = w * 0.8;
       let ofLeft = (w - lineW) / 2;
-      lines.value.style.left = left + ofLeft + "px";
-      lines.value.style.width = lineW + "px";
+      if (lines.value) {
+        lines.value.style.left = left + ofLeft + "px";
+        lines.value.style.width = lineW + "px";
+      }
     }
     // 鼠标移开
     function resetLine() {
       let ent = document.querySelector(".onSelect");
-      if (ent) {
+      if (ent && lines.value) {
         let left = ent.offsetLeft;
         let w = ent.offsetWidth;
         let lineW = w * 0.8;
@@ -196,8 +200,16 @@ export default {
   },
   computed: {
     isPath() {
-      console.log(this.$store.getters.header);
       return this.$store.getters.header;
+    }
+  },
+  watch: {
+    isPath(newData, oldData) {
+      if (newData !== oldData) {
+        setTimeout(() => {
+          this.resetLine();
+        }, 0);
+      }
     }
   }
 };

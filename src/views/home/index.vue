@@ -1192,8 +1192,9 @@ export default {
   .model-move {
     padding-bottom: 0.208333rem;
     .move {
-      width: 110px;
+      width: 115px;
       height: 26px;
+      text-align: center;
       font-size: 14px;
       padding: 0 10px;
       color: #848fa2;

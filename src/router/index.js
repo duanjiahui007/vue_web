@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Main from "@/main/index";
+import Other from "@/main/other";
+
 const routes = [
   {
     path: "/",
@@ -13,6 +15,19 @@ const routes = [
         component: () => import("@/views/home/index"),
         meta: { title: "home" }
       },
+      {
+        path: "online",
+        component: () => import("@/views/online/index"),
+        meta: { title: "online" }
+      }
+    ]
+  },
+  {
+    path: "/other",
+    name: "other",
+    component: Other,
+    meta: { title: "other" },
+    children: [
       {
         path: "online",
         component: () => import("@/views/online/index"),
