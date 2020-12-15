@@ -114,23 +114,24 @@ export default {
 }
 .imageBox > div {
   color: #7c889c;
-  margin-bottom: 10px;
+  margin-bottom: 0.104167rem;
+  font-size: 0.09375rem;
 }
 .imageBox > img {
-  width: 120px;
-  height: 120px;
+  width: 1.041667rem;
+  height: 1.041667rem;
   border-radius: 50%;
   display: block;
   margin: 0 auto;
   background-color: rgb(168, 164, 164);
-  margin-bottom: 26px;
+  margin-bottom: 0.135417rem;
   cursor: pointer;
 }
 .imageBox > .imageFile {
   display: none;
 }
 .imageBox > p {
-  font-size: 12px;
+  font-size: 0.104167rem;
   cursor: pointer;
   color: #00cbec;
   display: inline;

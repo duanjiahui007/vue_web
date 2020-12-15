@@ -33,7 +33,7 @@ img {
     display: block;
     border: none;
 }
-i,em,strong  {
+em,strong  {
     font-style: normal;
     font-weight: normal;
 }
@@ -113,7 +113,7 @@ i,em,strong  {
     width: .78125rem;
     font-size: .09375rem;
 }
-.NextBtn:hover {
+.NextBtn:hover ,.NextBtn:focus{
     background-color: #4dd1e9;
     border-color: #4dd1e9;
 }
@@ -127,12 +127,48 @@ i,em,strong  {
     padding: 0 0.9375rem 0 0.25rem;
     box-sizing: border-box;
 }
-.form-box .ant-form-item  .ant-form-item-control .ant-input-affix-wrapper{
+.form-box-left {
+    padding: 0 0.63rem 0 0.25rem;
+}
+.form-box-right {
+    padding: 0 0.25rem 0  0.63rem;
+}
 
+/* 不带删除 */
+.ant-input {
     background-color: #eff1f1;
     line-height: 0.260417rem;
+    font-size: 16px;
+}
+/* 带删除的 */
+.form-box .ant-form-item  .ant-form-item-control .ant-input-affix-wrapper{
+    background-color: #eff1f1;
+    line-height: 0.260417rem;
+}
+.form-box .ant-calendar-picker {
+    width: 100%;
+}
+.form-box .ant-calendar-picker-input.ant-input{
+    line-height: 0.260417rem;
+    background-color: #eff1f1;
+    font-size: 16px;
 }
 .form-box .ant-form-item  .ant-form-item-control .ant-input-affix-wrapper /deep/.ant-input {
     background-color: #eff1f1;
     font-size: 16px;
+}
+.ant-input-clear-icon {
+    font-size: 22px; 
+}
+.ant-calendar-picker-icon {
+    font-size: 22px;
+}
+.ant-calendar-picker-clear {
+    font-size: 22px;
+    background-color: #eff1f1;
+}
+.ant-calendar-picker-clear, .ant-calendar-picker-icon {
+    width: 22px;
+    height: 22px;
+    margin-top: -11px;
 }

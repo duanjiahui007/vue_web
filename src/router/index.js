@@ -14,11 +14,6 @@ const routes = [
         path: "home",
         component: () => import("@/views/home/index"),
         meta: { title: "home" }
-      },
-      {
-        path: "online",
-        component: () => import("@/views/online/index"),
-        meta: { title: "online" }
       }
     ]
   },

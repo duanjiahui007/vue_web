@@ -25,9 +25,15 @@
       </div>
       <div class="line"><span>Other Ways</span></div>
       <div class="login-mode">
-        <div class="btnLink"><i class="JS JS--twitter"></i> <span>Twitter</span>  </div>
-        <div class="btnLink"><i class="JS JS-facebooBig"></i> <span>Facebook</span></div>
-        <div class="btnLink"><i class="JS JS-linkedin"></i><span>Linkedin</span></div>
+        <div class="btnLink">
+          <i class="JS JS--twitter"></i> <span>Twitter</span>
+        </div>
+        <div class="btnLink">
+          <i class="JS JS-facebooBig"></i> <span>Facebook</span>
+        </div>
+        <div class="btnLink">
+          <i class="JS JS-linkedin"></i><span>Linkedin</span>
+        </div>
         <p>
           By signing up, you agree to our terms of service, privacy policy and
           email
@@ -39,7 +45,10 @@
           <div class="btnLink"><i class="JS JS-facebooBig"></i></div>
           <div class="btnLink"><i class="JS JS-linkedin"></i></div>
         </div>
-        <p>By signing up, you agree to our terms of service, privacy policy and email</p>
+        <p>
+          By signing up, you agree to our terms of service, privacy policy and
+          email
+        </p>
       </div>
     </div>
   </div>
@@ -117,7 +126,7 @@ export default {
         padding: 0 0.9375rem 0 0.25rem;
         box-sizing: border-box;
         .ant-form-item {
-          margin-bottom: .125rem;
+          margin-bottom: 0.125rem;
           .ant-form-item-control {
             .ant-input-affix-wrapper {
               background-color: #eff1f1;
@@ -143,7 +152,7 @@ export default {
       flex-direction: column;
       justify-content: flex-start;
       box-sizing: border-box;
-      padding-top: .677083rem;
+      padding-top: 0.677083rem;
       background-image: url("../../assets/images/sign/bj.png");
       background-position: right bottom;
       background-size: 100%;
@@ -156,7 +165,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding-left:.104167rem;
+        padding-left: 0.104167rem;
         margin-top: 0.208333rem;
         i {
           font-size: 20px;
@@ -184,60 +193,60 @@ export default {
 @media screen and (max-width: 1200px) {
   .login .login-content {
     .login-mode {
-    padding-top: .88rem;
+      padding-top: 0.88rem;
       .btnLink {
-          width: 1.3rem;
-          height: 0.3rem;
-          padding-left: 0.267rem
+        width: 1.3rem;
+        height: 0.3rem;
+        padding-left: 0.267rem;
       }
-    } 
+    }
   }
 }
-@media screen  and (max-width: 960px){
+@media screen and (max-width: 960px) {
   .login {
     padding-top: 0;
     padding-bottom: 3.333rem;
     .login-content {
       width: 100%;
       border-radius: 0;
-      background-image: linear-gradient(180deg,#b7f3f3,#e7f5f6,#f4f5f7);
-      flex-direction:column ;
-      padding: .533rem;
+      background-image: linear-gradient(180deg, #b7f3f3, #e7f5f6, #f4f5f7);
+      flex-direction: column;
+      padding: 0.533rem;
       padding-bottom: 0;
-      >div {
+      > div {
         flex-basis: 100%;
       }
       .login-data {
         h4 {
-          font-size: .45rem;
-          margin-bottom: .2933rem;
+          font-size: 0.45rem;
+          margin-bottom: 0.2933rem;
         }
         p {
-          font-size: .1866rem;
-          margin-bottom:.8rem ;
+          font-size: 0.1866rem;
+          margin-bottom: 0.8rem;
         }
         .form-box {
           padding: 0 1.2rem;
           /deep/.ant-form-item-label {
             label {
-              font-size: .24rem;
+              font-size: 0.24rem;
             }
           }
           .ant-form-item .ant-form-item-control {
             .ant-input-affix-wrapper {
-             line-height: .8rem; 
-             /deep/.ant-input {
-               font-size: .2133rem;
-             }
+              line-height: 0.8rem;
+              /deep/.ant-input {
+                font-size: 0.2133rem;
+              }
             }
           }
           .btnItem {
             margin-bottom: 0;
             /deep/.ant-btn-round {
-              height: .8rem;
+              height: 0.8rem;
               width: 100%;
-              border-radius:.133rem ;
-              font-size: .32rem;
+              border-radius: 0.133rem;
+              font-size: 0.32rem;
             }
           }
         }
@@ -250,12 +259,13 @@ export default {
         justify-content: space-between;
         align-items: center;
         span {
-          font-size: .21333rem;
+          font-size: 0.21333rem;
           font-weight: bolder;
           flex-shrink: 0;
           color: #828282;
         }
-        &::before,&::after {
+        &::before,
+        &::after {
           content: "";
           height: 1px;
           background-color: #a1a0a0;
@@ -268,20 +278,20 @@ export default {
         padding: 0 1.6rem;
         background-image: url("../../assets/images/sign/bj.png");
         background-position: center bottom;
-        background-size: 100% ;
+        background-size: 100%;
         background-repeat: no-repeat;
         padding-bottom: 1rem;
-        padding-top: .05rem;
+        padding-top: 0.05rem;
         margin-bottom: 0;
         .min-mode-btn {
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-bottom: .2666rem;
+          margin-bottom: 0.2666rem;
           .btnLink {
-            margin: 0 .4rem;
-            width: .6rem;
-            height: .6rem;
+            margin: 0 0.4rem;
+            width: 0.6rem;
+            height: 0.6rem;
             border-radius: 50%;
             border: 1px solid #83bfc9;
             background-color: #ffffff;
@@ -289,12 +299,12 @@ export default {
             justify-content: center;
             align-items: center;
             i {
-              font-size: .2666rem;
+              font-size: 0.2666rem;
             }
           }
         }
         p {
-          line-height: .346rem;
+          line-height: 0.346rem;
           color: #b5babf;
         }
       }

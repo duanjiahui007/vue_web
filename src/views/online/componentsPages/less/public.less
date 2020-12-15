@@ -1,0 +1,88 @@
+.online-content {
+  width: 75%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0.260417rem 0.3125rem;
+  padding-bottom: 0.833333rem;
+  position: relative;
+  display: flex;
+  > .online-count {
+    flex-basis: 50%;
+    flex-grow: 1;
+    /deep/ .w-e-toolbar {
+      background-color:  #e3e5e8!important;
+    }
+    /deep/ .w-e-text-container {
+      background-color: #eff1f1!important;
+      height: .833333rem!important;
+    }
+
+  }
+  .online-image {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+  }
+  .online-from {
+    h4 {
+      font-size: 0.166667rem;
+      margin-bottom: 0.072917rem;
+      color: #172945;
+      line-height: 1;
+    }
+    p {
+      font-size: 0.072917rem;
+      color: #7c889c;
+      margin-bottom: 0.260417rem;
+    }
+    .form-box {
+      // 富文本
+      /deep/ .w-e-text ul {
+        list-style-type: disc;
+      }
+      /deep/ .w-e-text ol {
+        list-style-type: decimal;
+      }   
+      /deep/.ant-form-item label {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      /deep/.ant-calendar-picker {
+        width: 100%;
+        line-height: 0.260417rem;
+      }
+      .itemName {
+        /deep/.ant-form-item-children {
+          display: flex;
+          justify-content: space-between;
+          > .ant-input {
+            flex-basis: 45%;
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
+  }
+  .online-next {
+    position: absolute;
+    bottom: 0.416667rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    /deep/.ant-btn {
+      margin: 0 .114583rem;
+    }
+    .defaultBtn {
+      height: .286458rem;
+      min-width: 105px;
+      min-height: 32px;
+      width: .78125rem;
+      font-size: .09375rem;
+      border-color: #37bcd2;
+      color: #37bcd2;
+    }
+  }
+}
