@@ -17,7 +17,11 @@
             <a-input-password v-model:value="form.pwd" allowClear />
           </a-form-item>
           <a-form-item class="btnItem">
-            <a-button type="primary" shape="round" :loading="loading"
+            <a-button
+              type="primary"
+              shape="round"
+              :loading="loading"
+              class="NextBtn"
               >continue</a-button
             >
           </a-form-item>
@@ -67,7 +71,7 @@ export default {
         pwd: ""
       },
       title: "Welcome to Log on",
-      erTip: `If you do not already have an account, please <a href="#/signUp">sign up</a> now `,
+      erTip: `If you do not already have an account, please <a href="#/signUp" style="color:#37bbd1;">sign up</a> now `,
       loading: false
     };
   },
@@ -95,11 +99,12 @@ export default {
 .login {
   background-color: #f3f5f5;
   padding-top: 20px;
+  flex-grow: 1;
   .login-content {
     width: 75%;
     margin: 0 auto;
     background-color: #ffffff;
-    padding: 0.208333rem 0.3125rem 3.088542rem;
+    padding: 0.208333rem 0.3125rem 1.4rem;
     border-radius: 8px;
     display: flex;
     > div {
@@ -113,12 +118,12 @@ export default {
         color: #172945;
         font-family: "Georgia";
       }
-      p {
+      > p {
         font-size: 0.072917rem;
         color: #7c889c;
         font-family: "Arial";
         margin-bottom: 0.177083rem;
-        a {
+        > a {
           color: #08cdee;
         }
       }
@@ -167,6 +172,7 @@ export default {
         justify-content: flex-start;
         padding-left: 0.104167rem;
         margin-top: 0.208333rem;
+        font-size: 0.09375rem;
         i {
           font-size: 20px;
           margin-right: 0.052083rem;

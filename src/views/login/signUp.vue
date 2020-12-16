@@ -21,7 +21,11 @@
             <a-input v-model:value="form.phone" allowClear />
           </a-form-item>
           <a-form-item class="btnItem">
-            <a-button type="primary" shape="round" :loading="loading"
+            <a-button
+              type="primary"
+              shape="round"
+              :loading="loading"
+              class="NextBtn"
               >continue</a-button
             >
           </a-form-item>
@@ -67,7 +71,7 @@ export default {
         phone: ""
       },
       title: "Free Registration",
-      erTip: `An existing account? <a href="#/signIn">In the login </a>  `,
+      erTip: `An existing account? <a href="#/signIn" style="color:#37bbd1;">In the login </a>  `,
       loading: false
     };
   },
@@ -95,11 +99,12 @@ export default {
 .login {
   background-color: #f3f5f5;
   padding-top: 20px;
+  flex-grow: 1;
   .login-content {
     width: 75%;
     margin: 0 auto;
     background-color: #ffffff;
-    padding: 0.208333rem 0.3125rem 3.088542rem;
+    padding: 0.208333rem 0.3125rem 1.4rem;
     border-radius: 8px;
     display: flex;
     > div {
@@ -177,6 +182,7 @@ export default {
         justify-content: flex-start;
         padding-left: 0.104167rem;
         margin-top: 0.208333rem;
+        font-size: 0.09375rem;
         i {
           font-size: 20px;
           margin-right: 0.052083rem;

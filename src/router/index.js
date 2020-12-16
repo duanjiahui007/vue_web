@@ -29,19 +29,19 @@ const routes = [
         meta: { title: "online" }
       },
       {
-        path:"model",
+        path: "model",
         component: () => import("@/views/model/index.vue"),
-        meta: {title:"model"}
+        meta: { title: "model" }
       },
       {
-        path:"personal",
-        component:()=>import("@/views/personal/index.vue"),
-        meta: {title:"personal"}
+        path: "personal",
+        component: () => import("@/views/personal/index.vue"),
+        meta: { title: "personal" }
       },
       {
-        path:"us",
-        component: ()=>import("@/views/connectUs/index.vue"),
-        meta : { title: "us" }
+        path: "us",
+        component: () => import("@/views/connectUs/index.vue"),
+        meta: { title: "us" }
       }
     ]
   },

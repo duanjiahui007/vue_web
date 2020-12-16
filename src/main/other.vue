@@ -17,8 +17,15 @@ export default {
 
 <style lang="less" scoped>
 main {
-  padding-bottom: 3.3rem;
+  padding-bottom: 1.4rem;
   background-color: #f3f5f5;
   padding-top: 20px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+@media screen and (max-width: 960px) {
+  main {
+    padding-bottom: 2.4rem;
+  }
 }
 </style>

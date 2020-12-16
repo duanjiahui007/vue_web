@@ -50,16 +50,13 @@ export default {
         return;
       }
       if (!file.type.match(/png|jpeg|jpg/g)) {
-        this.$message({
-          message: this.$t("setUp.format"),
-          type: "warning",
-          duration: 2000
-        });
+        this.$message.warning("Pictures only support png | JPEG | JPG format!");
         this.$refs.upLoad.value = "";
         return;
       }
-      if (file.size / 1024 / 1024 > 5) {
-        this.message.error(this.$t("setUp.sizeWord"));
+      console.log(this);
+      if (file.size / 1024 / 1024 > 3) {
+        this.$message.warning("Picture size less than 3M !");
         this.$refs.upLoad.value = "";
         return;
       }
@@ -97,7 +94,7 @@ export default {
       // xhr.send(formData)
     },
     error() {
-      this.$refs.avant.setAttribute("src", avatar);
+      this.$refs.avant.setAttribute("src", this.avatar);
     }
   },
   watch: {
@@ -114,7 +111,7 @@ export default {
 }
 .imageBox > div {
   color: #7c889c;
-  margin-bottom: 0.104167rem;
+  margin-bottom: 22px;
   font-size: 0.09375rem;
 }
 .imageBox > img {
@@ -124,7 +121,7 @@ export default {
   display: block;
   margin: 0 auto;
   background-color: rgb(168, 164, 164);
-  margin-bottom: 0.135417rem;
+  margin-bottom: 26px;
   cursor: pointer;
 }
 .imageBox > .imageFile {
@@ -134,7 +131,7 @@ export default {
   font-size: 0.104167rem;
   cursor: pointer;
   color: #00cbec;
-  display: inline;
+  display: inline-block;
   padding: 10px 16px;
   border: 1px solid #dfe2e6;
 }

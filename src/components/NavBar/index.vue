@@ -62,7 +62,7 @@ header {
   }
 }
 
-@media screen and (max-width: 1100px) and (min-width: 1024px) {
+@media screen and (max-width: 1120px) and (min-width: 1024px) {
   header {
     padding: 0 20px;
   }
@@ -70,7 +70,7 @@ header {
 
 @media screen and (max-width: 1024px) {
   header {
-    padding: 10px 15px;
+    padding: 0 15px !important;
     box-shadow: none;
     border-bottom: 1px solid #ffffff;
     background-image: radial-gradient(
