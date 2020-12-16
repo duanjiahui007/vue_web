@@ -25,8 +25,23 @@ const routes = [
     children: [
       {
         path: "online",
-        component: () => import("@/views/online/index"),
+        component: () => import("@/views/online/index.vue"),
         meta: { title: "online" }
+      },
+      {
+        path:"model",
+        component: () => import("@/views/model/index.vue"),
+        meta: {title:"model"}
+      },
+      {
+        path:"personal",
+        component:()=>import("@/views/personal/index.vue"),
+        meta: {title:"personal"}
+      },
+      {
+        path:"us",
+        component: ()=>import("@/views/connectUs/index.vue"),
+        meta : { title: "us" }
       }
     ]
   },

@@ -20,17 +20,17 @@
         :class="{ onSelect: 'model' === isPath }"
         data-path="model"
       >
-        <router-link to="">resource model</router-link>
+        <router-link to="/other/model">resource model</router-link>
       </div>
       <div
         class="menu"
         :class="{ onSelect: 'personal' === isPath }"
         data-path="personal"
       >
-        <router-link to="">personal center</router-link>
+        <router-link to="/other/personal">personal center</router-link>
       </div>
       <div class="menu" :class="{ onSelect: 'us' === isPath }" data-path="us">
-        <router-link to="">connert us</router-link>
+        <router-link to="/other/us">connert us</router-link>
       </div>
       <div class="line" ref="lines"></div>
     </nav>
@@ -60,13 +60,13 @@
         <router-link to="/other/online" @click="touchDown" data-path="online"
           >online production</router-link
         >
-        <router-link to="" @click="touchDown" data-path="model"
+        <router-link to="/other/model" @click="touchDown" data-path="model"
           >resource model</router-link
         >
-        <router-link to="" @click="touchDown" data-path="personal"
+        <router-link to="/other/personal" @click="touchDown" data-path="personal"
           >personal center</router-link
         >
-        <router-link to="" @click="touchDown" data-path="us"
+        <router-link to="/other/us" @click="touchDown" data-path="us"
           >connect us</router-link
         >
       </div>
