@@ -1,7 +1,6 @@
 <template>
   <div class="">
     <a-form :model="dataValue" layout="vertical" class="ex-body-form form-box ">
-      {{ index }}
       <div class="ex-body-left">
         <a-form-item label="Company name">
           <a-input v-model:value="dataValue.companyName"></a-input>
@@ -13,8 +12,8 @@
           <a-date-picker
             v-model:value="dataValue.periodStart"
             :disabled-date="disabledStartDate"
-            format="YYYY-MM-DD "
             valueFormat="YYYY-MM-DD"
+            format="YYYY-MM-DD "
             placeholder="Start"
           />
           <span class="dotted-line">---</span>
@@ -108,14 +107,14 @@ export default {
       if (!startValue || !endValue) {
         return false;
       }
-      return startValue.valueOf() > endValue.valueOf();
+      return startValue.valueOf() > new Date(endValue.replace(/-/g, "/"));
     },
     disabledEndDate(endValue) {
       const startValue = this.dataValue.periodStart;
       if (!endValue || !startValue) {
         return false;
       }
-      return startValue.valueOf() >= endValue.valueOf();
+      return new Date(startValue.replace(/-/g, "/")) >= endValue.valueOf();
     },
     // 删除
     handleDel() {

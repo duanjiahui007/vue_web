@@ -25,6 +25,7 @@
 
 <script>
 import Work from "./components/work";
+
 export default {
   name: "experience",
   data() {
@@ -57,12 +58,10 @@ export default {
     // 接受work 数据
     getWorkData(val, index) {
       this.work.splice(index, 1, val);
-      console.log(this.work, index);
     },
     // 删除work 数据
     delWorkData(index) {
       this.work.splice(index, 1);
-      console.log(this.work, index);
     },
     // 添加work 数据
     addWork() {
@@ -115,6 +114,12 @@ export default {
   .ex-body {
     border-top: 1px solid #dee4e7;
     padding: 20px 62px;
+  }
+
+  .ex-footer {
+    background-color: #e8e8e8;
+    padding-left: 22px;
+    padding-right: 16px;
   }
 }
 </style>
