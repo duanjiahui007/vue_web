@@ -10,7 +10,9 @@ import {
   Form,
   Input,
   Upload,
-  DatePicker
+  DatePicker,
+  Modal,
+  Divider
 } from "ant-design-vue";
 // 公共样式
 import "./style/index.css";
@@ -29,9 +31,11 @@ vue
 
 vue.config.productionTip = false;
 vue.config.globalProperties.$message = message;
-vue.use(Button);
+vue.config.globalProperties.$model = Modal;
 vue
+  .use(Button)
   .use(Form)
   .use(Input)
   .use(Upload)
-  .use(DatePicker);
+  .use(DatePicker)
+  .use(Divider);

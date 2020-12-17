@@ -98,16 +98,55 @@ footer {
 .copyright {
   margin-bottom: 0;
 }
+
+.sign-footer {
+  .links {
+    margin-bottom: 0.08rem;
+    a {
+      margin: 0 0.078125rem;
+      i {
+        font-size: 0.18rem;
+        color: #b4e5ed;
+      }
+    }
+  }
+  .goPage {
+    margin-bottom: 0.08rem;
+    a {
+      margin: 0 0.078125rem;
+      font-size: 0.075rem;
+      font-family: Arial;
+      color: #ffffff;
+    }
+  }
+  .language,
+  .copyright {
+    align-items: center;
+    color: #8cd7e3;
+    margin-bottom: 0.0475rem;
+    i {
+      font-size: 0.08rem;
+      color: #8cd7e3;
+      margin-right: 0.026042rem;
+    }
+    span {
+      font-size: 0.063333rem;
+    }
+  }
+  .copyright {
+    margin-bottom: 0;
+  }
+}
 @media screen and (max-width: 960px) {
   footer {
     padding: 0.4rem 0 0.2933rem !important;
     background-image: none !important;
     background-color: #30b7cd !important;
     .links {
-      margin-bottom: 0.2666rem;
+      margin-bottom: 0.2666rem !important;
       i {
-        font-size: 0.5333rem;
-        margin: 0 0.2rem;
+        font-size: 0.5333rem !important;
+        margin: 0 0.2rem !important;
       }
     }
     .goPage {
@@ -116,10 +155,10 @@ footer {
     .language,
     .copyright {
       i {
-        font-size: 0.333rem;
+        font-size: 0.333rem !important;
       }
       span {
-        font-size: 0.22666rem;
+        font-size: 0.22666rem !important;
       }
     }
   }

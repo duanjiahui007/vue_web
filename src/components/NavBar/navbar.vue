@@ -39,7 +39,7 @@
       @click.stop="changeLogin"
       :class="{ hoverLogin: showLogin || pageLogin }"
     >
-      <div class="loginBtn">sign in/sign up</div>
+      <div class="loginBtn">sign in / sign up</div>
       <div class="selectloifn" v-show="showLogin">
         <router-link to="/signIn" @click="touchDown" data-path="signIn"
           >sign in</router-link
@@ -314,8 +314,8 @@ export default {
     a {
       display: block;
       padding: 0 14px;
-      line-height: 24px;
-      height: 24px;
+      line-height: 28px;
+      height: 28px;
       transition: all 600ms ease-in-out;
       color: #24292e;
       &:hover {

@@ -10,6 +10,7 @@ p {
 }
 html,body {
     font-family: "Georgia" '微软雅黑',Arial, Helvetica, sans-serif;
+    line-height: 1;
 }
 /* body::-webkit-scrollbar{
     width: 6px;
@@ -93,7 +94,8 @@ em,strong  {
     box-shadow: none;
 }
 .sign-footer {
-    padding-top: 1.578125rem!important;
+    padding-top: .9rem!important;
+    padding-bottom: 0.1rem!important;
     background-image: url("../assets/images/home/footer/footer-bj-other.png")!important;
     background-color: transparent;
     position: absolute;
@@ -101,6 +103,10 @@ em,strong  {
     bottom: 0;
     left: 0;
     width: 100%;
+    
+}
+.sign-footer > div {
+    line-height: 1;
 }
 
 /* next Btn */
@@ -112,6 +118,7 @@ em,strong  {
     min-height: 32px;
     width: .78125rem;
     font-size: .09375rem;
+    color: #ffffff;
 }
 .NextBtn:hover ,.NextBtn:focus{
     background-color: #4dd1e9;
@@ -152,6 +159,7 @@ em,strong  {
     line-height: 0.260417rem;
     background-color: #eff1f1;
     font-size: 16px;
+    color: #37bcd2;
 }
 .form-box .ant-form-item  .ant-form-item-control .ant-input-affix-wrapper /deep/.ant-input {
     background-color: #eff1f1;

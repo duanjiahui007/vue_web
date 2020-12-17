@@ -44,36 +44,38 @@ export default {
   background-size: 100%;
   background-position: center top;
   margin-top: -20px;
-  padding-top: 0.260417rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 50.000064px;
+  // padding-bottom: .2125rem;
   .content-box {
     width: 75%;
     margin: 0 auto;
     .content {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-      padding-top: 0.6667rem;
+      padding-top: 0.5625rem;
+      padding-left: 50.000064px;
+      padding-right: 50.000064px;
       .item {
-        flex-basis: 29%;
+        width: 272px;
         border-radius: 0.052083rem;
         background-color: #ffffff;
-        padding: 0.260417rem 0.260417rem 0.208333rem;
+        padding: 42.24px 23.04px;
         transition: all 200ms ease-in-out;
         img {
-          width: 0.833333rem;
-          height: 0.833333rem;
+          width: 100px;
+          height: 100px;
           border-radius: 50%;
           margin: auto;
-          margin-bottom: 0.56875rem;
+          margin-bottom: 105px;
         }
         .link-btn {
           background-color: #3badc3;
           text-align: center;
-          border-radius: 0.052083rem;
-          font-size: 0.09375rem;
+          border-radius: 9.999936px;
+          font-size: 16px;
           color: #ffffff;
-          padding: 0.104167rem 0;
+          padding: 8px 0;
         }
         &:hover {
           box-shadow: 0 0 28px 5px #ddd5d5;
@@ -82,22 +84,40 @@ export default {
     }
   }
 }
-
+@media screen and (max-width: 1300px) {
+  .connect-us {
+    .content-box {
+      width: 95%;
+      .content {
+        .item {
+          width: 220px;
+          img {
+            margin-bottom: 80px;
+          }
+          .link-btn {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 960px) {
   .connect-us {
     .content-box {
       width: 100%;
       .content {
         flex-direction: column;
+        margin-bottom: 0.4rem;
         .item {
-          width: 60%;
+          width: 80%;
           flex-basis: auto;
           margin-bottom: 0.8rem;
-          padding: 0.617rem 0.60417rem 0.8333rem;
+          padding: 0.7rem 0.60417rem 0.8333rem;
           img {
             width: 2.3rem;
             height: 2.3rem;
-            margin-bottom: 1.067rem;
+            margin-bottom: 2rem;
           }
           .link-btn {
             font-size: 0.293rem;

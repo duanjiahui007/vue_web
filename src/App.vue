@@ -16,6 +16,8 @@
   user-select: none;
   position: relative;
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 1400px) {

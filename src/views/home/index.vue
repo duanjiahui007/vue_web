@@ -552,7 +552,7 @@
         </div>
       </div>
       <div class="model-move">
-        <div class="move">read more >>></div>
+        <router-link to="/other/model" class="move">read more >>></router-link>
       </div>
     </div>
     <!-- 用户反馈-联系我们 -->
