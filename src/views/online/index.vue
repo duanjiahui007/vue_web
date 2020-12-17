@@ -4,8 +4,8 @@
       <time-axis :Num="Bnum"></time-axis>
     </div>
 
-    <!-- <a-button @click="next">前进</a-button>
-    <a-button @click="goBack">后退</a-button> -->
+    <a-button @click="next">前进</a-button>
+    <a-button @click="goBack">后退</a-button>
     <resume></resume>
     <basic></basic>
     <!-- <keep-alive > -->

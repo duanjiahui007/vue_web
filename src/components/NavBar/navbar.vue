@@ -63,7 +63,10 @@
         <router-link to="/other/model" @click="touchDown" data-path="model"
           >resource model</router-link
         >
-        <router-link to="/other/personal" @click="touchDown" data-path="personal"
+        <router-link
+          to="/other/personal"
+          @click="touchDown"
+          data-path="personal"
           >personal center</router-link
         >
         <router-link to="/other/us" @click="touchDown" data-path="us"
