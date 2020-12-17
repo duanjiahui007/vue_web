@@ -159,6 +159,7 @@ em,strong  {
     line-height: 0.260417rem;
     background-color: #eff1f1;
     font-size: 16px;
+    color: #37bcd2;
 }
 .form-box .ant-form-item  .ant-form-item-control .ant-input-affix-wrapper /deep/.ant-input {
     background-color: #eff1f1;

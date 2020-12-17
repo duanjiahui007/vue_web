@@ -8,6 +8,7 @@
     <a-button @click="goBack">后退</a-button>
     <resume></resume>
     <basic></basic>
+    <experience></experience>
     <!-- <keep-alive > -->
     <!-- </keep-alive> -->
   </div>
@@ -17,6 +18,7 @@
 import TimeAxis from "./components/TimeAxis.vue";
 import Resume from "./componentsPages/resume.vue";
 import basic from "./componentsPages/basic.vue";
+import experience from "./componentsPages/experience";
 export default {
   name: "onlinePage",
   data() {
@@ -40,7 +42,8 @@ export default {
   components: {
     TimeAxis,
     Resume,
-    basic
+    basic,
+    experience
   }
 };
 </script>
