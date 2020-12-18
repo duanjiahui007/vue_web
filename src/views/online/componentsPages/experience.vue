@@ -165,7 +165,7 @@ export default {
   name: "experience",
   data() {
     return {
-      work: [
+      work: [                                                                                                                            
         {
           companyName: "firstNAme",
           duration: "YES_first",
