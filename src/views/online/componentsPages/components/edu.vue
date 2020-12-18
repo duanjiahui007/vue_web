@@ -2,13 +2,13 @@
   <div class="">
     <a-form :model="dataValue" layout="vertical" class="ex-body-form form-box ">
       <div class="ex-body-left">
-        <a-form-item label="Company name">
-          <a-input v-model:value="dataValue.companyName"></a-input>
+        <a-form-item label="School name">
+          <a-input v-model:value="dataValue.schoolName"></a-input>
         </a-form-item>
-        <a-form-item label="Position duration">
-          <a-input v-model:value="dataValue.duration"></a-input>
+        <a-form-item label="Course name">
+          <a-input v-model:value="dataValue.courseName"></a-input>
         </a-form-item>
-        <a-form-item label="Employment period" class="time-slot">
+        <a-form-item label="School time" class="time-slot">
           <a-date-picker
             v-model:value="dataValue.periodStart"
             :disabled-date="disabledStartDate"
@@ -27,7 +27,7 @@
         </a-form-item>
       </div>
       <div class="ex-body-right">
-        <a-form-item label="Job description">
+        <a-form-item label="Other description">
           <div v-html="creatEditor" class="editorClass"></div>
         </a-form-item>
         <div class="btn">
@@ -50,25 +50,25 @@
 import E from "wangeditor";
 import I18next from "i18next";
 export default {
-  name: "work",
+  name: "edu",
   props: {
     editorId: {
       type: String,
-      default: "work_i"
+      default: "edu_i"
     },
     index: {
       type: Number,
       default: null
     },
-    workData: {
+    eduData: {
       type: Object,
       default: function() {
         return {
-          companyName: "",
-          duration: "",
+          schoolName: "",
+          courseName: "",
           periodStart: null,
           periodEnd: null,
-          jobOther: ""
+          Other: ""
         };
       }
     },
@@ -81,12 +81,12 @@ export default {
     return {
       editor: null,
       dataValue: {
-        companyName: "",
-        duration: "",
-        periodStart: null,
-        periodEnd: null,
-        jobOther: ""
-      }
+          schoolName: "",
+          courseName: "",
+          periodStart: null,
+          periodEnd: null,
+          Other: ""
+        }
     };
   },
   mounted() {
@@ -98,12 +98,12 @@ export default {
     this.editor.config.showFullScreen = false;
     this.editor.config.placeholder = "";
     this.editor.create();
-    this.editor.txt.html(this.workData.jobOther);
-    this.dataValue = this.workData;
+    this.editor.txt.html(this.eduData.Other);
+    this.dataValue = this.eduData;
   },
   updated() {
-    this.editor.txt.html(this.workData.jobOther);
-    this.dataValue = this.workData;
+    this.dataValue = this.eduData;
+    this.editor.txt.html(this.eduData.Other);
   },
   methods: {
     // 时间联动
@@ -127,8 +127,8 @@ export default {
     },
     // 保存
     handleSave() {
-      this.dataValue.jobOther = this.editor.txt.html();
-      this.$emit("datasave", this.dataValue, this.index,this.comName);
+      this.dataValue.Other = this.editor.txt.html();
+      this.$emit("datasave", this.dataValue, this.index, this.comName);
     }
   },
   computed: {

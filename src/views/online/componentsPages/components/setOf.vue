@@ -2,32 +2,12 @@
   <div class="">
     <a-form :model="dataValue" layout="vertical" class="ex-body-form form-box ">
       <div class="ex-body-left">
-        <a-form-item label="Company name">
-          <a-input v-model:value="dataValue.companyName"></a-input>
-        </a-form-item>
-        <a-form-item label="Position duration">
-          <a-input v-model:value="dataValue.duration"></a-input>
-        </a-form-item>
-        <a-form-item label="Employment period" class="time-slot">
-          <a-date-picker
-            v-model:value="dataValue.periodStart"
-            :disabled-date="disabledStartDate"
-            valueFormat="YYYY-MM-DD"
-            format="YYYY-MM-DD "
-            placeholder="Start"
-          />
-          <span class="dotted-line">---</span>
-          <a-date-picker
-            v-model:value="dataValue.periodEnd"
-            :disabled-date="disabledEndDate"
-            valueFormat="YYYY-MM-DD"
-            format="YYYY-MM-DD"
-            placeholder="End"
-          />
+        <a-form-item label="A new set of">
+          <a-input v-model:value="dataValue.newTitle"></a-input>
         </a-form-item>
       </div>
       <div class="ex-body-right">
-        <a-form-item label="Job description">
+        <a-form-item label="Add new content">
           <div v-html="creatEditor" class="editorClass"></div>
         </a-form-item>
         <div class="btn">
@@ -50,25 +30,22 @@
 import E from "wangeditor";
 import I18next from "i18next";
 export default {
-  name: "work",
+  name: "setOf",
   props: {
     editorId: {
       type: String,
-      default: "work_i"
+      default: "setOf_i"
     },
     index: {
       type: Number,
       default: null
     },
-    workData: {
+    setOfData: {
       type: Object,
       default: function() {
         return {
-          companyName: "",
-          duration: "",
-          periodStart: null,
-          periodEnd: null,
-          jobOther: ""
+          newTitle: "",
+          Other: ""
         };
       }
     },
@@ -81,12 +58,9 @@ export default {
     return {
       editor: null,
       dataValue: {
-        companyName: "",
-        duration: "",
-        periodStart: null,
-        periodEnd: null,
-        jobOther: ""
-      }
+          newTitle: "",
+          Other: ""
+        }
     };
   },
   mounted() {
@@ -98,37 +72,22 @@ export default {
     this.editor.config.showFullScreen = false;
     this.editor.config.placeholder = "";
     this.editor.create();
-    this.editor.txt.html(this.workData.jobOther);
-    this.dataValue = this.workData;
+    this.editor.txt.html(this.setOfData.Other);
+    this.dataValue = this.setOfData;
   },
   updated() {
-    this.editor.txt.html(this.workData.jobOther);
-    this.dataValue = this.workData;
+    this.dataValue = this.setOfData;
+    this.editor.txt.html(this.setOfData.Other);
   },
   methods: {
-    // 时间联动
-    disabledStartDate(startValue) {
-      const endValue = this.dataValue.periodEnd;
-      if (!startValue || !endValue) {
-        return false;
-      }
-      return startValue.valueOf() > new Date(endValue.replace(/-/g, "/"));
-    },
-    disabledEndDate(endValue) {
-      const startValue = this.dataValue.periodStart;
-      if (!endValue || !startValue) {
-        return false;
-      }
-      return new Date(startValue.replace(/-/g, "/")) >= endValue.valueOf();
-    },
     // 删除
     handleDel() {
       this.$emit("datadel", this.index,this.comName);
     },
     // 保存
     handleSave() {
-      this.dataValue.jobOther = this.editor.txt.html();
-      this.$emit("datasave", this.dataValue, this.index,this.comName);
+      this.dataValue.Other = this.editor.txt.html();
+      this.$emit("datasave", this.dataValue, this.index, this.comName);
     }
   },
   computed: {

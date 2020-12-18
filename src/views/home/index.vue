@@ -1131,7 +1131,7 @@ export default {
               width: 0;
               height: 100%;
               position: absolute;
-              box-shadow: 1px -1px #7d7d7d;
+              box-shadow: 1px -1px #dec9c9;
               left: 0;
               right: 0;
               margin: auto;
