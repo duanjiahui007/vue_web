@@ -2,32 +2,21 @@
   <div class="">
     <a-form :model="dataValue" layout="vertical" class="ex-body-form form-box ">
       <div class="ex-body-left">
-        <a-form-item label="Company name">
-          <a-input v-model:value="dataValue.companyName"></a-input>
+        <a-form-item label="Special Skill">
+          <a-input v-model:value="dataValue.otherA"></a-input>
+          <a-rate v-model:value="dataValue.otherValueA" />
         </a-form-item>
-        <a-form-item label="Position duration">
-          <a-input v-model:value="dataValue.duration"></a-input>
+        <a-form-item>
+          <a-input v-model:value="dataValue.otherB"></a-input>
+          <a-rate v-model:value="dataValue.otherValueB" />
         </a-form-item>
-        <a-form-item label="Employment period" class="time-slot">
-          <a-date-picker
-            v-model:value="dataValue.periodStart"
-            :disabled-date="disabledStartDate"
-            valueFormat="YYYY-MM-DD"
-            format="YYYY-MM-DD "
-            placeholder="Start"
-          />
-          <span class="dotted-line">---</span>
-          <a-date-picker
-            v-model:value="dataValue.periodEnd"
-            :disabled-date="disabledEndDate"
-            valueFormat="YYYY-MM-DD"
-            format="YYYY-MM-DD"
-            placeholder="End"
-          />
+        <a-form-item>
+          <a-input v-model:value="dataValue.otherC"></a-input>
+          <a-rate v-model:value="dataValue.otherValueC" />
         </a-form-item>
       </div>
       <div class="ex-body-right">
-        <a-form-item label="Job description">
+        <a-form-item label="Hobbies and interests">
           <div v-html="creatEditor" class="editorClass"></div>
         </a-form-item>
         <div class="btn">
@@ -50,25 +39,27 @@
 import E from "wangeditor";
 import I18next from "i18next";
 export default {
-  name: "work",
+  name: "other",
   props: {
     editorId: {
       type: String,
-      default: "work_i"
+      default: "other_i"
     },
     index: {
       type: Number,
       default: null
     },
-    workData: {
+    otherData: {
       type: Object,
       default: function() {
         return {
-          companyName: "",
-          duration: "",
-          periodStart: null,
-          periodEnd: null,
-          jobOther: ""
+          otherA: "",
+          otherValueA: 1,
+          otherB: "",
+          otherValueB: 1,
+          otherC: "",
+          otherValueC: 1,
+          otherEg: ""
         };
       }
     },
@@ -81,11 +72,13 @@ export default {
     return {
       editor: null,
       dataValue: {
-        companyName: "",
-        duration: "",
-        periodStart: null,
-        periodEnd: null,
-        jobOther: ""
+        otherA: "",
+        otherValueA: 1,
+        otherB: "",
+        otherValueB: 1,
+        otherC: "",
+        otherValueC: 1,
+        otherEg: ""
       }
     };
   },
@@ -98,36 +91,21 @@ export default {
     this.editor.config.showFullScreen = false;
     this.editor.config.placeholder = "";
     this.editor.create();
-    this.editor.txt.html(this.workData.jobOther);
-    this.dataValue = this.workData;
+    this.editor.txt.html(this.otherData.otherEg);
+    this.dataValue = this.otherData;
   },
   updated() {
-    this.editor.txt.html(this.workData.jobOther);
-    this.dataValue = this.workData;
+    this.dataValue = this.otherData;
+    this.editor.txt.html(this.otherData.otherEg);
   },
   methods: {
-    // 时间联动
-    disabledStartDate(startValue) {
-      const endValue = this.dataValue.periodEnd;
-      if (!startValue || !endValue) {
-        return false;
-      }
-      return startValue.valueOf() > new Date(endValue.replace(/-/g, "/"));
-    },
-    disabledEndDate(endValue) {
-      const startValue = this.dataValue.periodStart;
-      if (!endValue || !startValue) {
-        return false;
-      }
-      return new Date(startValue.replace(/-/g, "/")) >= endValue.valueOf();
-    },
     // 删除
     handleDel() {
       this.$emit("datadel", this.index, this.comName);
     },
     // 保存
     handleSave() {
-      this.dataValue.jobOther = this.editor.txt.html();
+      this.dataValue.otherEg = this.editor.txt.html();
       this.$emit("datasave", this.dataValue, this.index, this.comName);
     }
   },
@@ -148,6 +126,21 @@ export default {
   > div {
     flex-basis: 40%;
   }
+  .ant-rate {
+    font-size: 30px;
+    color: #37bbd1;
+    margin-left: 20px;
+  }
+  .ex-body-left {
+    /deep/.ant-form-item-children {
+      display: flex;
+      align-items: center;
+      ul {
+        flex-shrink: 0;
+      }
+    }
+  }
+
   .time-slot {
     /deep/ .ant-form-item-children {
       display: flex;

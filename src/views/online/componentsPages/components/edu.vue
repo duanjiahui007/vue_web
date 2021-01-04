@@ -73,20 +73,20 @@ export default {
       }
     },
     comName: {
-      type:String,
-      default:null
+      type: String,
+      default: null
     }
   },
   data() {
     return {
       editor: null,
       dataValue: {
-          schoolName: "",
-          courseName: "",
-          periodStart: null,
-          periodEnd: null,
-          Other: ""
-        }
+        schoolName: "",
+        courseName: "",
+        periodStart: null,
+        periodEnd: null,
+        Other: ""
+      }
     };
   },
   mounted() {
@@ -123,7 +123,7 @@ export default {
     },
     // 删除
     handleDel() {
-      this.$emit("datadel", this.index,this.comName);
+      this.$emit("datadel", this.index, this.comName);
     },
     // 保存
     handleSave() {

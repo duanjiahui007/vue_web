@@ -12,7 +12,8 @@ import {
   Upload,
   DatePicker,
   Modal,
-  Divider
+  Divider,
+  Rate
 } from "ant-design-vue";
 // 公共样式
 import "./style/index.css";
@@ -38,4 +39,5 @@ vue
   .use(Input)
   .use(Upload)
   .use(DatePicker)
-  .use(Divider);
+  .use(Divider)
+  .use(Rate);

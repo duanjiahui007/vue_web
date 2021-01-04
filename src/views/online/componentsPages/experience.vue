@@ -1,5 +1,6 @@
 <template>
   <div class="experience ">
+    <!-- work -->
     <div class="ex-item online-content">
       <div class="ex-head" @click.stop="handleSwitch('work')">
         <div class="ex-head-left">
@@ -7,19 +8,25 @@
           <h4>Work experience</h4>
         </div>
         <div class="ex-head-right">
-          <a-button disabled>
+          <a-button @click.stop="handleReplace('up')">
             <template #icon>
               <UpOutlined />
             </template>
           </a-button>
-          <a-button>
+          <a-button  @click.stop="handleReplace('down')">
             <template #icon>
               <DownOutlined />
             </template>
           </a-button>
         </div>
       </div>
-      <div class="ex-body online-from" :class="{'ex-close':openState.work,'ex-body-padding':work.length<1}">
+      <div
+        class="ex-body online-from"
+        :class="{
+          'ex-close': openState.work,
+          'ex-body-padding': work.length < 1
+        }"
+      >
         <work
           :editorId="'work_' + index"
           :work-data="item"
@@ -31,12 +38,16 @@
           :key="index"
         ></work>
       </div>
-      <div class="ex-footer" @click.stop="addWork" :class="{'ex-close':openState.work}">
+      <div
+        class="ex-footer"
+        @click.stop="addWork"
+        :class="{ 'ex-close': openState.work }"
+      >
         <div class="footer-left">
           <PlusCircleFilled />Add Education experience
         </div>
         <div class="footer-right">
-          <a-button disabled>
+          <a-button>
             <template #icon>
               <UpOutlined />
             </template>
@@ -49,44 +60,112 @@
         </div>
       </div>
     </div>
-
+    <!-- edu -->
     <div class="ex-item online-content">
       <div class="ex-head" @click.stop="handleSwitch('edu')">
         <div class="ex-head-left">
-          <i class="icon-image"></i>
+          <i class="icon-image icon-edu-image"></i>
           <h4>Education experience</h4>
         </div>
         <div class="ex-head-right">
-          <a-button disabled>
+          <a-button @click.stop="handleReplace('up')">
             <template #icon>
               <UpOutlined />
             </template>
           </a-button>
-          <a-button>
+          <a-button  @click.stop="handleReplace('down')">
             <template #icon>
               <DownOutlined />
             </template>
           </a-button>
         </div>
       </div>
-      <div class="ex-body online-from" :class="{'ex-close':openState.edu,'ex-body-padding':edu.length<1}">
+      <div
+        class="ex-body online-from"
+        :class="{
+          'ex-close': openState.edu,
+          'ex-body-padding': edu.length < 1
+        }"
+      >
         <edu
           :editorId="'edu_' + index"
-          :work-data="item"
+          :edu-data="item"
           :index="index"
           :com-name="'edu'"
           @datasave="getWorkData"
-          @datadel="delWorkData" 
+          @datadel="delWorkData"
           v-for="(item, index) in edu"
           :key="index"
         ></edu>
       </div>
-      <div class="ex-footer" @click.stop="addEdu" :class="{'ex-close':openState.edu}">
+      <div
+        class="ex-footer"
+        @click.stop="addEdu"
+        :class="{ 'ex-close': openState.edu }"
+      >
         <div class="footer-left">
           <PlusCircleFilled />Add Education experience
         </div>
         <div class="footer-right">
-          <a-button disabled>
+          <a-button @click.stop="handleReplace('up')">
+            <template #icon>
+              <UpOutlined />
+            </template>
+          </a-button>
+          <a-button  @click.stop="handleReplace('down')">
+            <template #icon>
+              <DownOutlined />
+            </template>
+          </a-button>
+        </div>
+      </div>
+    </div>
+    <!-- other -->
+    <div class="ex-item online-content">
+      <div class="ex-head" @click.stop="handleSwitch('other')">
+        <div class="ex-head-left">
+          <i class="icon-image icon-edu-image"></i>
+          <h4>Others</h4>
+        </div>
+        <div class="ex-head-right">
+          <a-button>
+            <template #icon>                                                                                                                                                                                                                                                      
+              <UpOutlined />
+            </template>
+          </a-button>
+          <a-button>
+            <template #icon>
+              <DownOutlined />
+            </template>
+          </a-button>
+        </div>
+      </div>
+      <div
+        class="ex-body online-from"
+        :class="{
+          'ex-close': openState.other,
+          'ex-body-padding': other.length < 1
+        }"
+      >
+        <other
+          :editorId="'other_' + index"
+          :other-data="item"
+          :index="index"
+          :com-name="'other'"
+          @datasave="getWorkData"
+          @datadel="delWorkData"
+          v-for="(item, index) in other"
+          :key="index"
+        ></other>
+      </div>
+      <div
+        class="ex-footer"
+        @click.stop="addOther"
+        :class="{ 'ex-close': openState.other }"
+      >
+        <div class="footer-left"><PlusCircleFilled />Add Special Skill</div>
+        <div class="footer-right">
+          <a-button>
             <template #icon>
               <UpOutlined />
             </template>
@@ -99,15 +178,15 @@
         </div>
       </div>
     </div>
-
+    <!-- set of -->
     <div class="ex-item online-content">
       <div class="ex-head" @click.stop="handleSwitch('setOf')">
         <div class="ex-head-left">
-          <i class="icon-image"></i>
+          <i class="icon-image icon-setof-image"></i>
           <h4>A new set of</h4>
         </div>
         <div class="ex-head-right">
-          <a-button disabled>
+          <a-button>
             <template #icon>
               <UpOutlined />
             </template>
@@ -119,24 +198,32 @@
           </a-button>
         </div>
       </div>
-      <div class="ex-body online-from" :class="{'ex-close':openState.setOf,'ex-body-padding':setOf.length<1}">
+      <div
+        class="ex-body online-from"
+        :class="{
+          'ex-close': openState.setOf,
+          'ex-body-padding': setOf.length < 1
+        }"
+      >
         <set-of
           :editorId="'setOf_' + index"
-          :work-data="item"
+          :set-of-data="item"
           :index="index"
           :com-name="'setOf'"
           @datasave="getWorkData"
-          @datadel="delWorkData" 
+          @datadel="delWorkData"
           v-for="(item, index) in setOf"
           :key="index"
         ></set-of>
       </div>
-      <div class="ex-footer" @click.stop="addSetOf" :class="{'ex-close':openState.setOf}">
-        <div class="footer-left">
-          <PlusCircleFilled />Add A new set of
-        </div>
+      <div
+        class="ex-footer"
+        @click.stop="addSetOf"
+        :class="{ 'ex-close': openState.setOf }"
+      >
+        <div class="footer-left"><PlusCircleFilled />Add A new set of</div>
         <div class="footer-right">
-          <a-button disabled>
+          <a-button>
             <template #icon>
               <UpOutlined />
             </template>
@@ -154,8 +241,9 @@
 
 <script>
 import Work from "./components/work.vue";
-import Edu from "./components/edu.vue"
-import SetOf from "./components/setOf.vue"
+import Edu from "./components/edu.vue";
+import SetOf from "./components/setOf.vue";
+import Other from "./components/other.vue";
 import {
   PlusCircleFilled,
   UpOutlined,
@@ -165,7 +253,7 @@ export default {
   name: "experience",
   data() {
     return {
-      work: [                                                                                                                            
+      work: [
         {
           companyName: "firstNAme",
           duration: "YES_first",
@@ -183,59 +271,68 @@ export default {
           Other: ""
         }
       ],
-      others: [{}],
-      setOf: [
+      other: [
         {
-          newTitle:"",
-          Other:""
+          otherA: "",
+          otherValueA: 0,
+          otherB: "",
+          otherValueB: 0,
+          otherC: "",
+          otherValueC: 0,
+          otherEg: ""
         }
       ],
-      openState:{
-        work:false,
-        edu:false,
-        other:false,
-        setOf:false
+      setOf: [
+        {
+          newTitle: "",
+          Other: ""
+        }
+      ],
+      openState: {
+        work: false,
+        edu: false,
+        other: false,
+        setOf: false
       }
     };
   },
   methods: {
     // 接受 组件 数据
-    getWorkData(val, index,name) {
-      switch(name) {
-        case "work": 
+    getWorkData(val, index, name) {
+      switch (name) {
+        case "work":
           this.work.splice(index, 1, val);
           break;
-        case "edu": 
+        case "edu":
           this.edu.splice(index, 1, val);
           break;
-        case "other": 
+        case "other":
           this.other.splice(index, 1, val);
           break;
-        case "setOf": 
+        case "setOf":
           this.setOf.splice(index, 1, val);
           break;
-        default :
+        default:
           break;
       }
-      
     },
     // 删除 组件 work 数据
-    delWorkData(index,name) {
-      switch(name) {
-        case "work": 
+    delWorkData(index, name) {
+      switch (name) {
+        case "work":
           this.work.splice(index, 1);
           break;
-        case "edu": 
+        case "edu":
           this.edu.splice(index, 1);
           break;
-        case "other": 
+        case "other":
           this.other.splice(index, 1);
           break;
-        case "setOf": 
+        case "setOf":
           this.setOf.splice(index, 1);
           break;
-        default :
-          break;
+        default:
+          break;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
       }
     },
     // 添加work 数据
@@ -252,39 +349,61 @@ export default {
     // 添加 edu 数据
     addEdu() {
       let obj = {
-          schoolName: "",
-          courseName: "",
-          periodStart: null,
-          periodEnd: null,
-          Other: ""
-        }
+        schoolName: "",
+        courseName: "",
+        periodStart: null,
+        periodEnd: null,
+        Other: ""
+      };
       this.edu.push(obj);
+    },
+    // 添加other 数据
+    addOther() {
+      let obj = {
+        otherA: "",
+        otherValueA: 0,
+        otherB: "",
+        otherValueB: 0,
+        otherC: "",
+        otherValueC: 0,
+        otherEg: ""
+      };
+      this.other.push(obj);
     },
     // 添加 setOf 数据
     addSetOf() {
       let obj = {
-          newTitle:"",
-          Other:""
-        }
+        newTitle: "",
+        Other: ""
+      };
       this.setOf.push(obj);
     },
     // 打开关闭ex-body
     handleSwitch(val) {
-      switch(val) {
-        case "work": 
+      switch (val) {
+        case "work":
           this.openState.work = !this.openState.work;
           break;
-        case "edu": 
+        case "edu":
           this.openState.edu = !this.openState.edu;
           break;
-        case "other": 
+        case "other":
           this.openState.other = !this.openState.other;
           break;
-        case "setOf": 
+        case "setOf":
           this.openState.setOf = !this.openState.setOf;
           break;
-        default :
+        default:
           break;
+      }
+    },
+    // 替换顺序
+    handleReplace(val) {
+      console.log(event)
+      if(val == 'up') {
+        console.log("up")
+      }else {
+        console.log("down")
       }
     }
   },
@@ -292,13 +411,19 @@ export default {
     PlusCircleFilled,
     UpOutlined,
     DownOutlined,
-    Work,Edu,SetOf
+    Work,
+    Edu,
+    SetOf,
+    Other
   }
 };
 </script>
 
 <style lang="less" scoped>
 @import "./less/public.less";
+.experience {
+  position: relative;
+}
 .ex-item {
   background-color: #ffffff;
   width: 75%;
@@ -310,6 +435,7 @@ export default {
   padding: 0;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   overflow: hidden;
+  transition: ease-in-out 240ms ;
   .ex-head {
     padding: 14px 62px;
     display: flex;
@@ -328,6 +454,15 @@ export default {
         background-repeat: no-repeat;
         background-position-x: 0;
       }
+      .icon-edu-image {
+        background-position-x: -56px;
+      }
+      .icon-other-image {
+        background-position-x: -27px;
+      }
+      .icon-setof-image {
+        background-position-x: -83px;
+      }
       h4 {
         font-size: 22px;
         color: #14a3ba;
@@ -339,7 +474,6 @@ export default {
         border-radius: 4px;
       }
     }
-    
   }
 
   .ex-body {
@@ -362,7 +496,7 @@ export default {
       align-items: center;
       font-size: 14px;
       color: #7c889c;
-      .anticon  {
+      .anticon {
         font-size: 26px;
         margin-right: 14px;
         color: #37bbd1;

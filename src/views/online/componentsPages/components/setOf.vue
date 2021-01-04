@@ -50,17 +50,17 @@ export default {
       }
     },
     comName: {
-      type:String,
-      default:null
+      type: String,
+      default: null
     }
   },
   data() {
     return {
       editor: null,
       dataValue: {
-          newTitle: "",
-          Other: ""
-        }
+        newTitle: "",
+        Other: ""
+      }
     };
   },
   mounted() {
@@ -82,7 +82,7 @@ export default {
   methods: {
     // 删除
     handleDel() {
-      this.$emit("datadel", this.index,this.comName);
+      this.$emit("datadel", this.index, this.comName);
     },
     // 保存
     handleSave() {
