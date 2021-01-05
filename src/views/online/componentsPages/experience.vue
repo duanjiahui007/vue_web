@@ -412,10 +412,14 @@ export default {
         // 设置移动动画
         domA.classList.add("ex-item-animation");
         domM.classList.add("ex-item-animation-up");
-        let margin = Number(window.getComputedStyle(domA, null).marginBottom.slice(0,-2))
-        domA.style.transform = "translateY(" + (domM.offsetHeight + margin) +"px)";
-        domM.style.transform = "translateY(-" +( domA.offsetHeight + margin) +"px)";
-        this.hasWindowCenter(domA,domA.offsetHeight);
+        let margin = Number(
+          window.getComputedStyle(domA, null).marginBottom.slice(0, -2)
+        );
+        domA.style.transform =
+          "translateY(" + (domM.offsetHeight + margin) + "px)";
+        domM.style.transform =
+          "translateY(-" + (domA.offsetHeight + margin) + "px)";
+        this.hasWindowCenter(domA, domA.offsetHeight + margin);
         // 删除动画 替换元素
         setTimeout(() => {
           domA.style.transform = "none";
@@ -431,37 +435,41 @@ export default {
         }
         let domA = event.target.offsetParent;
         let domM = event.target.offsetParent.nextElementSibling;
-        let domB = event.target.offsetParent.nextElementSibling.nextElementSibling;
+        let domB =
+          event.target.offsetParent.nextElementSibling.nextElementSibling;
         let domCopy = domA;
         // 设置过渡动画
         domA.classList.add("ex-item-animation");
         domM.classList.add("ex-item-animation-up");
-        let margin = Number(window.getComputedStyle(domA, null).marginBottom.slice(0,-2))
-        domA.style.transform = "translateY(" + (domM.offsetHeight + margin) +"px)";
-        domM.style.transform = "translateY(-" +( domA.offsetHeight + margin) +"px)";
+        let margin = Number(
+          window.getComputedStyle(domA, null).marginBottom.slice(0, -2)
+        );
+        domA.style.transform =
+          "translateY(" + (domM.offsetHeight + margin) + "px)";
+        domM.style.transform =
+          "translateY(-" + (domA.offsetHeight + margin) + "px)";
         // 删除动画 替换元素
-        setTimeout(()=>{
+        setTimeout(() => {
           domA.style.transform = "none";
           domM.style.transform = "none";
           domA.classList.remove("ex-item-animation");
           domM.classList.remove("ex-item-animation-up");
           domPer.removeChild(domA);
           domPer.insertBefore(domCopy, domB);
-        },450)
-        
+        }, 450);
       }
     },
-    // 判断当前内容是否在窗口显示
-    hasWindowCenter(val,domHeight){
+    // 判断当前内容是否在窗口显示   ---- 优化待定 ----
+    hasWindowCenter(val, domHeight) {
       let client = val.getBoundingClientRect();
       // let ClientHeight = document.documentElement.clientHeight;
-      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;//IE兼容;  
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop; //IE兼容;
       // let ViewHeight = document.documentElement.clientHeight;
       // let MAXHeight = ViewHeight + scrollTop ;
-      console.log(client ,scrollTop)
-      if(client.top<0){
+      console.log(client, scrollTop);
+      if (client.top < 0) {
         document.documentElement.scrollTop = scrollTop - domHeight;
-        document.body.style.transition = 'all  ease-in-out 450ms';
       }
       // if(client > ClientHeight){
 
@@ -496,7 +504,7 @@ export default {
   padding: 0;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   overflow: hidden;
-  
+
   .ex-head {
     padding: 14px 62px;
     display: flex;

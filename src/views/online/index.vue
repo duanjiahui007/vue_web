@@ -6,11 +6,12 @@
 
     <a-button @click="next">前进</a-button>
     <a-button @click="goBack">后退</a-button>
-    <resume></resume>
+    <!-- <resume></resume>
     <basic></basic>
-    <experience></experience>
-    <!-- <keep-alive > -->
-    <!-- </keep-alive> -->
+    <experience></experience> -->
+    <keep-alive>
+      <component :is="isCompontent"></component>
+    </keep-alive>
   </div>
 </template>
 
@@ -44,6 +45,32 @@ export default {
     Resume,
     basic,
     experience
+  },
+  computed: {
+    isCompontent() {
+      let components = "";
+      switch (this.Bnum) {
+        case 1:
+          components = "Resume";
+          break;
+        case 2:
+          components = "Resume";
+          break;
+        case 3:
+          components = "basic";
+          break;
+        case 4:
+          components = "basic";
+          break;
+        case 5:
+          components = "experience";
+          break;
+        case 6:
+          components = "experience";
+          break;
+      }
+      return components;
+    }
   }
 };
 </script>
