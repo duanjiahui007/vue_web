@@ -119,17 +119,12 @@ export default {
 
 <style lang="less" scoped>
 @import "../less/public.less";
+@import "../less/publicCom.less";
 .ex-body-form {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  > div {
-    flex-basis: 40%;
-  }
   .ant-rate {
-    font-size: 30px;
+    font-size: 0.15625rem;
     color: #37bbd1;
-    margin-left: 20px;
+    margin-left: 0.104167rem;
   }
   .ex-body-left {
     /deep/.ant-form-item-children {
@@ -137,42 +132,6 @@ export default {
       align-items: center;
       ul {
         flex-shrink: 0;
-      }
-    }
-  }
-
-  .time-slot {
-    /deep/ .ant-form-item-children {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .dotted-line {
-        font-size: 26px;
-        color: #bdbdbd;
-      }
-      .ant-calendar-picker {
-        flex-basis: 40%;
-        min-width: auto !important;
-      }
-    }
-  }
-  .ex-body-right {
-    .btn {
-      text-align: right;
-      .ant-btn {
-        margin: 0 10px;
-      }
-      .del-btn:hover,
-      .del-btn:active,
-      .del-btn:focus {
-        color: #e74b4b;
-        border-color: #e74b4b;
-      }
-      .save-btn:hover,
-      .save-btn:active,
-      .save-btn:focus {
-        color: #1facb1;
-        border-color: #1facb1;
       }
     }
   }

@@ -100,47 +100,5 @@ export default {
 
 <style lang="less" scoped>
 @import "../less/public.less";
-.ex-body-form {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  > div {
-    flex-basis: 40%;
-  }
-  .time-slot {
-    /deep/ .ant-form-item-children {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .dotted-line {
-        font-size: 26px;
-        color: #bdbdbd;
-      }
-      .ant-calendar-picker {
-        flex-basis: 40%;
-        min-width: auto !important;
-      }
-    }
-  }
-  .ex-body-right {
-    .btn {
-      text-align: right;
-      .ant-btn {
-        margin: 0 10px;
-      }
-      .del-btn:hover,
-      .del-btn:active,
-      .del-btn:focus {
-        color: #e74b4b;
-        border-color: #e74b4b;
-      }
-      .save-btn:hover,
-      .save-btn:active,
-      .save-btn:focus {
-        color: #1facb1;
-        border-color: #1facb1;
-      }
-    }
-  }
-}
+@import "../less/publicCom.less";
 </style>

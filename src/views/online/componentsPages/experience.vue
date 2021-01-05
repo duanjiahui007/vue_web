@@ -1,5 +1,5 @@
 <template>
-  <div class="experience ">
+  <div class="experience" id="experienceDom">
     <!-- work -->
     <div class="ex-item online-content">
       <div class="ex-head" @click.stop="handleSwitch('work')">
@@ -13,7 +13,7 @@
               <UpOutlined />
             </template>
           </a-button>
-          <a-button  @click.stop="handleReplace('down')">
+          <a-button @click.stop="handleReplace('down')">
             <template #icon>
               <DownOutlined />
             </template>
@@ -73,7 +73,7 @@
               <UpOutlined />
             </template>
           </a-button>
-          <a-button  @click.stop="handleReplace('down')">
+          <a-button @click.stop="handleReplace('down')">
             <template #icon>
               <DownOutlined />
             </template>
@@ -112,7 +112,7 @@
               <UpOutlined />
             </template>
           </a-button>
-          <a-button  @click.stop="handleReplace('down')">
+          <a-button @click.stop="handleReplace('down')">
             <template #icon>
               <DownOutlined />
             </template>
@@ -128,12 +128,12 @@
           <h4>Others</h4>
         </div>
         <div class="ex-head-right">
-          <a-button>
-            <template #icon>                                                                                                                                                                                                                                                      
+          <a-button @click.stop="handleReplace('up')">
+            <template #icon>
               <UpOutlined />
             </template>
           </a-button>
-          <a-button>
+          <a-button @click.stop="handleReplace('down')">
             <template #icon>
               <DownOutlined />
             </template>
@@ -186,12 +186,12 @@
           <h4>A new set of</h4>
         </div>
         <div class="ex-head-right">
-          <a-button>
+          <a-button @click.stop="handleReplace('up')">
             <template #icon>
               <UpOutlined />
             </template>
           </a-button>
-          <a-button>
+          <a-button @click.stop="handleReplace('down')">
             <template #icon>
               <DownOutlined />
             </template>
@@ -332,7 +332,7 @@ export default {
           this.setOf.splice(index, 1);
           break;
         default:
-          break;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+          break;
       }
     },
     // 添加work 数据
@@ -399,12 +399,73 @@ export default {
     },
     // 替换顺序
     handleReplace(val) {
-      console.log(event)
-      if(val == 'up') {
-        console.log("up")
-      }else {
-        console.log("down")
+      console.log(event);
+      let domPer = document.getElementById("experienceDom");
+      if (val == "up") {
+        if (event.target.offsetParent.previousElementSibling === null) {
+          return;
+        }
+        let domM = event.target.offsetParent;
+        let domA = event.target.offsetParent.previousElementSibling;
+        let domB = event.target.offsetParent.nextElementSibling;
+        let domCopy = domA;
+        // 设置移动动画
+        domA.classList.add("ex-item-animation");
+        domM.classList.add("ex-item-animation-up");
+        let margin = Number(window.getComputedStyle(domA, null).marginBottom.slice(0,-2))
+        domA.style.transform = "translateY(" + (domM.offsetHeight + margin) +"px)";
+        domM.style.transform = "translateY(-" +( domA.offsetHeight + margin) +"px)";
+        this.hasWindowCenter(domA,domA.offsetHeight);
+        // 删除动画 替换元素
+        setTimeout(() => {
+          domA.style.transform = "none";
+          domM.style.transform = "none";
+          domA.classList.remove("ex-item-animation");
+          domM.classList.remove("ex-item-animation-up");
+          domPer.removeChild(domA);
+          domPer.insertBefore(domCopy, domB);
+        }, 450);
+      } else {
+        if (event.target.offsetParent.nextElementSibling === null) {
+          return;
+        }
+        let domA = event.target.offsetParent;
+        let domM = event.target.offsetParent.nextElementSibling;
+        let domB = event.target.offsetParent.nextElementSibling.nextElementSibling;
+        let domCopy = domA;
+        // 设置过渡动画
+        domA.classList.add("ex-item-animation");
+        domM.classList.add("ex-item-animation-up");
+        let margin = Number(window.getComputedStyle(domA, null).marginBottom.slice(0,-2))
+        domA.style.transform = "translateY(" + (domM.offsetHeight + margin) +"px)";
+        domM.style.transform = "translateY(-" +( domA.offsetHeight + margin) +"px)";
+        // 删除动画 替换元素
+        setTimeout(()=>{
+          domA.style.transform = "none";
+          domM.style.transform = "none";
+          domA.classList.remove("ex-item-animation");
+          domM.classList.remove("ex-item-animation-up");
+          domPer.removeChild(domA);
+          domPer.insertBefore(domCopy, domB);
+        },450)
+        
       }
+    },
+    // 判断当前内容是否在窗口显示
+    hasWindowCenter(val,domHeight){
+      let client = val.getBoundingClientRect();
+      // let ClientHeight = document.documentElement.clientHeight;
+      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;//IE兼容;  
+      // let ViewHeight = document.documentElement.clientHeight;
+      // let MAXHeight = ViewHeight + scrollTop ;
+      console.log(client ,scrollTop)
+      if(client.top<0){
+        document.documentElement.scrollTop = scrollTop - domHeight;
+        document.body.style.transition = 'all  ease-in-out 450ms';
+      }
+      // if(client > ClientHeight){
+
+      // }
     }
   },
   components: {
@@ -435,7 +496,7 @@ export default {
   padding: 0;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   overflow: hidden;
-  transition: ease-in-out 240ms ;
+  
   .ex-head {
     padding: 14px 62px;
     display: flex;
@@ -515,5 +576,13 @@ export default {
     display: none;
     padding: 0;
   }
+}
+.ex-item-animation {
+  z-index: 61;
+  transition: transform ease-in-out 450ms;
+}
+.ex-item-animation-up {
+  z-index: 60;
+  transition: transform ease-in-out 450ms;
 }
 </style>
