@@ -13,7 +13,8 @@ import {
   DatePicker,
   Modal,
   Divider,
-  Rate
+  Rate,
+  Spin
 } from "ant-design-vue";
 // 公共样式
 import "./style/index.css";
@@ -40,4 +41,5 @@ vue
   .use(Upload)
   .use(DatePicker)
   .use(Divider)
-  .use(Rate);
+  .use(Rate)
+  .use(Spin);

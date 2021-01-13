@@ -37,7 +37,7 @@ header {
   top: 0;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+  box-shadow: 0 10px 30px 0px rgba(197, 197, 197, 0.3);
   transition: all 400ms linear;
   background-color: #ffffff;
   z-index: 100;
