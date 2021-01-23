@@ -1,17 +1,21 @@
 <template>
   <div class="personal">
     <div class="user-basic">
-      <div class="user-head" >
-        <a-spin  size="large" :spinning='isUpload' wrapperClassName="loading-box">
+      <div class="user-head">
+        <a-spin
+          size="large"
+          :spinning="isUpload"
+          wrapperClassName="loading-box"
+        >
           <avatar-upload @files="avatarUp"></avatar-upload>
         </a-spin>
       </div>
       <div class="user-basic-txt">
-        <div class="user-name" v-if="!isEdit">{{basicData.name}}</div>
-        <div class="user-email" v-if="!isEdit">{{basicData.email}}</div>
-        <div class="user-phone" v-if="!isEdit">{{basicData.phone}}</div>
+        <div class="user-name">{{ basicData.name }}</div>
+        <div class="user-email" v-if="!isEdit">{{ basicData.email }}</div>
+        <div class="user-phone" v-if="!isEdit">{{ basicData.phone }}</div>
         <a-button
-          class = "user-edit"
+          class="user-edit"
           :loading="false"
           shape="round"
           v-if="!isEdit"
@@ -20,26 +24,42 @@
           <template #icon><EditOutlined /></template>
           Editor
         </a-button>
-        <a-input v-model:value="basicData.name" v-if="isEdit" class="user-input user-name user-color"/>
-        <a-input v-model:value="basicData.email" v-if="isEdit" class="user-input user-email user-color"/>
-        <a-input v-model:value="basicData.phone" v-if="isEdit" class="user-input user-phone user-color"/>
+        <a-input
+          v-model:value="basicData.email"
+          ref="emailInput"
+          v-if="isEdit"
+          class="user-input user-email user-color"
+        />
+        <a-input
+          v-model:value="basicData.phone"
+          v-if="isEdit"
+          class="user-input user-phone user-color"
+        />
         <a-button
-          class = "user-edit resume-color"
+          class="user-edit resume-color"
           type="primary"
           :loading="false"
           shape="round"
           v-if="isEdit"
           @click.stop="startEdit"
+          style="background-color:#f6bf4f; border-color:#f6bf4f;"
         >
-          <template #icon><EditOutlined /></template>
+          <template #icon>
+            <i
+              class="JS JS-save "
+              style="display:inline-block;margin-right:8px"
+            ></i
+          ></template>
           Save
         </a-button>
       </div>
-      <a-button type="primary" class="resume-btn resume-color">My resume</a-button>
+      <a-button type="primary" class="resume-btn resume-color"
+        >My resume</a-button
+      >
       <a-button class="resume-btn">My account</a-button>
     </div>
     <div class="user-resume">
-      <form-work></form-work>
+      <form-work v-if="false"></form-work>
     </div>
   </div>
 </template>
@@ -57,13 +77,13 @@ export default {
     return {
       // 头像
       avatar,
-      isUpload:false,
-      avatarShow:'',
+      isUpload: false,
+      avatarShow: "",
       isEdit: false,
-      basicData:{
-        name:'weiiller Yesd',
-        email:'8875441582@qq.com',
-        phone:'87-993886638'
+      basicData: {
+        name: "weiiller Yesd",
+        email: "8875441582@qq.com",
+        phone: "87-993886638"
       }
     };
   },
@@ -80,14 +100,22 @@ export default {
     // 保存编辑个人信息
     edit() {},
     // 上传图片
-    avatarUp(val){
-      this.isUpload = true ; 
-      console.log(val)
-      setTimeout(()=>{
-        this.isUpload = false ; 
-      },1000)
+    avatarUp(val) {
+      this.isUpload = true;
+      console.log(val);
+      setTimeout(() => {
+        this.isUpload = false;
+      }, 1000);
     }
-
+  },
+  watch: {
+    isEdit(newData) {
+      if (newData) {
+        setTimeout(() => {
+          this.$refs.emailInput.focus();
+        }, 0);
+      }
+    }
   }
 };
 </script>
@@ -100,7 +128,7 @@ export default {
   margin-bottom: 20px;
   border-color: #33b9cf;
   color: #33b9cf;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 .resume-color {
   background-color: #37bbd1;
@@ -114,15 +142,16 @@ export default {
   background-color: transparent;
   border-radius: 0;
   border: none;
-  border-bottom: 1px solid #e3e3e3;
+  background-color: #f3f5f5;
   outline: none;
   margin-bottom: 14px;
   text-align: center;
+  border-radius: 4px;
 }
 .user-input:focus {
   box-shadow: none;
 }
-// 
+//
 .personal {
   width: 82%;
   margin: 0 auto;
@@ -130,30 +159,30 @@ export default {
   // 个人资料
   .user-basic {
     flex-basis: 23.3%;
-    padding: .177083rem .177083rem .458333rem;
+    padding: 0.177083rem 0.177083rem 0.458333rem;
     background-color: #ffffff;
-    border-radius: .041667rem;
-    box-shadow: 0 0 .020833rem .020833rem #f2f2f2;
-    margin-right: .130208rem;
+    border-radius: 0.041667rem;
+    box-shadow: 0 0 0.020833rem 0.020833rem #f2f2f2;
+    margin-right: 0.130208rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: min-content;
     .user-head {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin: 0 auto 20px;
-        position: relative;
-        .loading-box {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 20px;
+      position: relative;
+      .loading-box {
+        width: 100%;
+        height: 100%;
+        :deep(.ant-spin-container) {
           width: 100%;
           height: 100%;
-          :deep(.ant-spin-container){
-            width: 100%;
-            height: 100%;
-          }
         }
+      }
     }
     .user-basic-txt {
       text-align: center;
@@ -167,26 +196,25 @@ export default {
       }
       .user-email {
         color: #bbbbbb;
-        font-size: .072917rem;
+        font-size: 0.072917rem;
         line-height: 30px;
+        font-size: 14px;
       }
       .user-phone {
-       color: #bbbbbb;line-height: 30px;
+        color: #bbbbbb;
+        line-height: 30px;
       }
       .user-edit {
         margin: 0 auto 50px;
       }
       .user-color {
-        color: #37bbd1;
+        color: #f6bf4f;
       }
     }
-
-
   }
   // 我的简历
   .user-resume {
     flex: 1;
   }
 }
-
 </style>

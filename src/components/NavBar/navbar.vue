@@ -284,7 +284,7 @@ export default {
   &.hoverLogin {
     background-image: linear-gradient(-88deg, #33a9c1 0%, #7ad1e0 99%);
     color: #ffff;
-    border-color: #33a9c1;
+    border-color: transparent;
   }
   .selectloifn {
     position: absolute;
