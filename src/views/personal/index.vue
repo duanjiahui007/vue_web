@@ -60,6 +60,7 @@
     </div>
     <div class="user-resume">
       <form-work v-if="false"></form-work>
+      <show-view></show-view>
     </div>
   </div>
 </template>
@@ -71,6 +72,9 @@ import avatar from "@/assets/images/personal/avatar.png";
 import avatarUpload from "@/components/avatarUpload/upload.vue";
 // 模板列表
 import formWork from "./children/formwork.vue";
+// 模板预览
+import showView from "./children/showView.vue";
+
 export default {
   name: "personal",
   data() {
@@ -90,7 +94,8 @@ export default {
   components: {
     EditOutlined,
     avatarUpload,
-    formWork
+    formWork,
+    showView
   },
   methods: {
     // 开始编辑个人信息
