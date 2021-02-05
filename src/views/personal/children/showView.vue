@@ -120,6 +120,32 @@
             </div>
             <p>职业介绍主体，所面对的是具有自身特点和独立择业意识的一个个不同的人，以及具有不同用人要求的一个个不同的企事业机关单位。择业者与用人单位选择对方的条件，有时是不符合实际情况，不合理的。例如，某些求职者一定要到外贸、外资公司等“好单位”；不少公司招工时，都要求“男1．75米、女1．65米、大学毕业”等。因此，职业介绍工作中，应当对择业者和用人单位的选择条件进行适当的引导，帮助他们明智地、合理地进行选择。这也可以说是职业介绍的“引导性”原则。在人力资源市场供求不平衡的情况下，通过引导使职业选择趋于合理显得更为重要。</p>
           </div>
+          <div class="other-work" v-for="item in 4" :key="item">
+            <h3 v-if="item<1">工作经验</h3>
+            <div class="work-item">
+              <span></span>
+              <div>
+                <div class="work-com">
+                  <span class="work-company">xxxx科技有限责任公司</span>
+                  <span class="work-name">UI设计师</span>
+                </div>
+                <span class="work-time">2020-05-16 - 2020-12-27</span>
+              </div>
+            </div>
+            <div class="work-box" >
+              <div class="line"></div>
+              <h3>工作描述:</h3>
+              <ul>
+                <li>负责酒快到O2O手机客户端、网站产品的UI设计和交互;</li>
+                <li>负责酒快到营销活动的UI视觉设计和H5设计;</li>
+                <li>根据公司营销计划的要求, 准备不同的设计方案, 并根据需求进行调整;</li>
+                <li>制定视觉规范和实施标准, 推进公司设计效果的统一性和规范程度, 提升公司品牌形象;</li>
+                <li>与研发、 测试和产品团队保持合作,不断更新现有产品的易用性, 优化迭代移动产品;</li>
+                <li>通过多种渠道收集用户反馈, 分析用户喜好, 持续改进设计风格, 提高用户的关注度;</li>
+              </ul>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
@@ -318,6 +344,7 @@ export default {
         padding-right: 40px;
         padding-bottom: 45px;
         .other-introduce {
+          margin-bottom: 18px;
           .other-title {
             display: flex;
             align-items: flex-end;
@@ -338,16 +365,79 @@ export default {
               &>span:nth-of-type(1){
                 margin-right: 10px;
               }
+              
             }
-            
+           
           }
-          > p {
+          >p {
             font-size: 14px;
             line-height: 24px;
             color: #6e7165;
           }
-          
         }
+        .other-work {
+          h3 {
+            color: #080808;
+            font-size:18px;
+            font-weight: bold;
+          }
+          .work-item {
+            display: flex;
+            align-items: center;
+            padding-top: 12px;
+            >span{
+              width: 26px;
+              height: 26px;
+              border: 2px solid #7c8dab;
+              padding: 2px;
+              background-color: #868a7b;
+              border-radius: 50%;
+              margin-right: 10px;
+              background-clip: content-box;
+            }
+            >div {
+              flex: 1;
+              display:flex;
+              justify-content: space-between;
+              height: 20px;
+              border-bottom: 1px solid #787d6f;
+              span{
+                font-size: 14px;
+                color: #787d6f;
+              }
+              .work-com {
+                .work-company {margin-right: 24px;}
+              }
+            }
+          }
+
+          .work-box {
+            padding:10px 0 10px 30px;
+            position: relative;
+            h3 {
+              font-size: 14px;
+              line-height: 20px;
+              color: #3a3c3b;
+            }
+            .line {
+              height: 80%;
+              border-left: 2px  dashed #bec7cc;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 12px;
+              margin: auto;
+            }
+            ul {
+              li{
+                font-size: 15px;
+                line-height: 22px;
+                color: #939393;
+              }
+            }
+          }
+        }
+
       }
     }
   }

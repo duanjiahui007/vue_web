@@ -60,7 +60,8 @@
     </div>
     <div class="user-resume">
       <form-work v-if="false"></form-work>
-      <show-view></show-view>
+      <show-view v-if="false"></show-view>
+      <show-views-two></show-views-two>
     </div>
   </div>
 </template>
@@ -72,8 +73,10 @@ import avatar from "@/assets/images/personal/avatar.png";
 import avatarUpload from "@/components/avatarUpload/upload.vue";
 // 模板列表
 import formWork from "./children/formwork.vue";
-// 模板预览
+// 模板预览1
 import showView from "./children/showView.vue";
+// 模板预览2
+import showViewsTwo from './children/showViewTwo.vue';
 
 export default {
   name: "personal",
@@ -95,7 +98,7 @@ export default {
     EditOutlined,
     avatarUpload,
     formWork,
-    showView
+    showView,showViewsTwo
   },
   methods: {
     // 开始编辑个人信息
@@ -180,6 +183,7 @@ export default {
       overflow: hidden;
       margin: 0 auto 20px;
       position: relative;
+      cursor: pointer;
       .loading-box {
         width: 100%;
         height: 100%;

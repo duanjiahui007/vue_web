@@ -75,6 +75,38 @@ export default {
     return {
       items,
       itemsData: [
+         {
+          imgs: items,
+          title: "My first resume",
+          introduce: "A resume prepared by an unhired programmer by an..... ",
+          isUsable: true,
+          isOpen: false,
+          id: 1
+        },
+         {
+          imgs: items,
+          title: "My first resume",
+          introduce: "A resume prepared by an unhired programmer by an..... ",
+          isUsable: true,
+          isOpen: false,
+          id: 1
+        },
+         {
+          imgs: items,
+          title: "My first resume",
+          introduce: "A resume prepared by an unhired programmer by an..... ",
+          isUsable: true,
+          isOpen: false,
+          id: 1
+        },
+         {
+          imgs: items,
+          title: "My first resume",
+          introduce: "A resume prepared by an unhired programmer by an..... ",
+          isUsable: true,
+          isOpen: false,
+          id: 1
+        },
         {
           imgs: items,
           title: "My first resume",
@@ -103,9 +135,11 @@ export default {
 <style lang="less" scoped>
 .form-work {
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
   flex-wrap: wrap;
+
   > .form-work-item {
+    margin-left: 60px;
     cursor: pointer;
     flex-basis: 280px;
     border-radius: 10px;
