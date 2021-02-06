@@ -32,14 +32,14 @@
               <p>
                 <span>年龄:</span>
                 <span>28岁</span>
-              </p> 
+              </p>
             </div>
             <div class="phone">
               <i class="JS JS-shouji"></i>
               <p>
                 <span>手机号:</span>
                 <span>16255864475</span>
-              </p> 
+              </p>
             </div>
             <div class="address">
               <i class="JS JS-dingwei"></i>
@@ -53,13 +53,13 @@
               <p>
                 <span>邮箱:</span>
                 <span>8854422668@168.com</span>
-              </p> 
+              </p>
             </div>
           </div>
           <div class="basis basis-edu">
             <h3 class="title">教育背景</h3>
             <div class="basis-edu-school">
-              <span>上海交通大学</span> 
+              <span>上海交通大学</span>
               <span>2001.09.16-2005.07.08</span>
               <span>计算机科学与技术</span>
             </div>
@@ -102,10 +102,10 @@
           <div class="basis basis-love">
             <h3>兴趣爱好</h3>
             <div class="basis-love-item">
-              <img :src="love1" alt="">
-              <img :src="love2" alt="">
-              <img :src="love3" alt="">
-              <img :src="love4" alt="">
+              <img :src="love1" alt="" />
+              <img :src="love2" alt="" />
+              <img :src="love3" alt="" />
+              <img :src="love4" alt="" />
             </div>
           </div>
         </div>
@@ -118,10 +118,12 @@
                 <span>前端工程师</span>
               </div>
             </div>
-            <p>职业介绍主体，所面对的是具有自身特点和独立择业意识的一个个不同的人，以及具有不同用人要求的一个个不同的企事业机关单位。择业者与用人单位选择对方的条件，有时是不符合实际情况，不合理的。例如，某些求职者一定要到外贸、外资公司等“好单位”；不少公司招工时，都要求“男1．75米、女1．65米、大学毕业”等。因此，职业介绍工作中，应当对择业者和用人单位的选择条件进行适当的引导，帮助他们明智地、合理地进行选择。这也可以说是职业介绍的“引导性”原则。在人力资源市场供求不平衡的情况下，通过引导使职业选择趋于合理显得更为重要。</p>
+            <p>
+              职业介绍主体，所面对的是具有自身特点和独立择业意识的一个个不同的人，以及具有不同用人要求的一个个不同的企事业机关单位。择业者与用人单位选择对方的条件，有时是不符合实际情况，不合理的。例如，某些求职者一定要到外贸、外资公司等“好单位”；不少公司招工时，都要求“男1．75米、女1．65米、大学毕业”等。因此，职业介绍工作中，应当对择业者和用人单位的选择条件进行适当的引导，帮助他们明智地、合理地进行选择。这也可以说是职业介绍的“引导性”原则。在人力资源市场供求不平衡的情况下，通过引导使职业选择趋于合理显得更为重要。
+            </p>
           </div>
           <div class="other-work" v-for="item in 4" :key="item">
-            <h3 v-if="item<1">工作经验</h3>
+            <h3 v-if="item < 1">工作经验</h3>
             <div class="work-item">
               <span></span>
               <div>
@@ -132,19 +134,30 @@
                 <span class="work-time">2020-05-16 - 2020-12-27</span>
               </div>
             </div>
-            <div class="work-box" >
+            <div class="work-box">
               <div class="line"></div>
               <h3>工作描述:</h3>
               <ul>
                 <li>负责酒快到O2O手机客户端、网站产品的UI设计和交互;</li>
                 <li>负责酒快到营销活动的UI视觉设计和H5设计;</li>
-                <li>根据公司营销计划的要求, 准备不同的设计方案, 并根据需求进行调整;</li>
-                <li>制定视觉规范和实施标准, 推进公司设计效果的统一性和规范程度, 提升公司品牌形象;</li>
-                <li>与研发、 测试和产品团队保持合作,不断更新现有产品的易用性, 优化迭代移动产品;</li>
-                <li>通过多种渠道收集用户反馈, 分析用户喜好, 持续改进设计风格, 提高用户的关注度;</li>
+                <li>
+                  根据公司营销计划的要求, 准备不同的设计方案,
+                  并根据需求进行调整;
+                </li>
+                <li>
+                  制定视觉规范和实施标准, 推进公司设计效果的统一性和规范程度,
+                  提升公司品牌形象;
+                </li>
+                <li>
+                  与研发、 测试和产品团队保持合作,不断更新现有产品的易用性,
+                  优化迭代移动产品;
+                </li>
+                <li>
+                  通过多种渠道收集用户反馈, 分析用户喜好, 持续改进设计风格,
+                  提高用户的关注度;
+                </li>
               </ul>
             </div>
-
           </div>
         </div>
       </div>
@@ -153,14 +166,14 @@
 </template>
 
 <script>
-import love1 from '@/assets/images/remover/01.png';
-import love2 from '@/assets/images/remover/02.png';
-import love3 from '@/assets/images/remover/03.png';
-import love4 from '@/assets/images/remover/04.png';
+import love1 from "@/assets/images/remover/01.png";
+import love2 from "@/assets/images/remover/02.png";
+import love3 from "@/assets/images/remover/03.png";
+import love4 from "@/assets/images/remover/04.png";
 export default {
   name: "showView",
   data() {
-    return {love1,love2,love3,love4};
+    return { love1, love2, love3, love4 };
   }
 };
 </script>
@@ -218,7 +231,7 @@ export default {
         flex-direction: column;
         align-items: center;
         background-color: #dce3dd;
-        flex-shrink:0 ;
+        flex-shrink: 0;
         .portrait {
           width: 175px;
           height: 175px;
@@ -241,7 +254,7 @@ export default {
             display: flex;
             align-items: bottom;
             margin-bottom: 10px;
-            i{
+            i {
               flex-shrink: 0;
               width: 30px;
               height: 30px;
@@ -253,23 +266,23 @@ export default {
               color: #ffffff;
               margin-right: 10px;
             }
-            p{
+            p {
               font-size: 14px;
               color: #8a96a4;
               flex: 1;
-              line-height: 30px;;
+              line-height: 30px;
               border-bottom: 1px solid #9ca7b4;
-              >span {
+              > span {
                 white-space: nowrap;
               }
-              > span:nth-of-type(1){
+              > span:nth-of-type(1) {
                 margin-right: 5px;
               }
             }
           }
         }
         .basis-edu {
-          >div {
+          > div {
             line-height: 24px;
             display: flex;
             flex-wrap: wrap;
@@ -283,12 +296,12 @@ export default {
             // margin-bottom: ;
             color: #787c74;
           }
-          .basis-edu-major{
+          .basis-edu-major {
             color: #919ea9;
           }
         }
         .basis-skill {
-          >div{
+          > div {
             margin-bottom: 10px;
             span {
               display: flex;
@@ -296,14 +309,14 @@ export default {
               font-size: 12px;
               color: #5a6777;
             }
-            >div{
+            > div {
               background-color: #cfdbea;
-               overflow: hidden;  
-              div{
+              overflow: hidden;
+              div {
                 height: 10px;
                 background-color: #868a7b;
                 width: 60%;
-                position: relative;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                position: relative;
                 &::after {
                   content: "";
                   display: block;
@@ -319,18 +332,18 @@ export default {
                   right: -14px;
                   z-index: 8;
                   border-right-color: transparent;
-                  border-top-color:transparent;
+                  border-top-color: transparent;
                 }
               }
             }
           }
         }
-        .basis-love{
+        .basis-love {
           margin-bottom: 70px;
           .basis-love-item {
             display: flex;
             justify-content: space-between;
-            >img {
+            > img {
               width: 50px;
               height: 50px;
               border-radius: 50%;
@@ -349,10 +362,10 @@ export default {
             display: flex;
             align-items: flex-end;
             margin-bottom: 28px;
-            h2{
+            h2 {
               font-size: 45px;
               color: #6e7165;
-              margin-right: 20px   ;
+              margin-right: 20px;
             }
             .other-introduce-sign {
               display: flex;
@@ -362,14 +375,12 @@ export default {
               color: #ffffff;
               height: 24px;
               padding: 0 10px;
-              &>span:nth-of-type(1){
+              & > span:nth-of-type(1) {
                 margin-right: 10px;
               }
-              
             }
-           
           }
-          >p {
+          > p {
             font-size: 14px;
             line-height: 24px;
             color: #6e7165;
@@ -378,14 +389,14 @@ export default {
         .other-work {
           h3 {
             color: #080808;
-            font-size:18px;
+            font-size: 18px;
             font-weight: bold;
           }
           .work-item {
             display: flex;
             align-items: center;
             padding-top: 12px;
-            >span{
+            > span {
               width: 26px;
               height: 26px;
               border: 2px solid #7c8dab;
@@ -395,24 +406,26 @@ export default {
               margin-right: 10px;
               background-clip: content-box;
             }
-            >div {
+            > div {
               flex: 1;
-              display:flex;
+              display: flex;
               justify-content: space-between;
               height: 20px;
               border-bottom: 1px solid #787d6f;
-              span{
+              span {
                 font-size: 14px;
                 color: #787d6f;
               }
               .work-com {
-                .work-company {margin-right: 24px;}
+                .work-company {
+                  margin-right: 24px;
+                }
               }
             }
           }
 
           .work-box {
-            padding:10px 0 10px 30px;
+            padding: 10px 0 10px 30px;
             position: relative;
             h3 {
               font-size: 14px;
@@ -421,7 +434,7 @@ export default {
             }
             .line {
               height: 80%;
-              border-left: 2px  dashed #bec7cc;
+              border-left: 2px dashed #bec7cc;
               position: absolute;
               top: 0;
               bottom: 0;
@@ -429,7 +442,7 @@ export default {
               margin: auto;
             }
             ul {
-              li{
+              li {
                 font-size: 15px;
                 line-height: 22px;
                 color: #939393;
@@ -437,7 +450,6 @@ export default {
             }
           }
         }
-
       }
     }
   }

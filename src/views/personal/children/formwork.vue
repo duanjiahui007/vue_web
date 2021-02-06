@@ -75,7 +75,7 @@ export default {
     return {
       items,
       itemsData: [
-         {
+        {
           imgs: items,
           title: "My first resume",
           introduce: "A resume prepared by an unhired programmer by an..... ",
@@ -83,7 +83,7 @@ export default {
           isOpen: false,
           id: 1
         },
-         {
+        {
           imgs: items,
           title: "My first resume",
           introduce: "A resume prepared by an unhired programmer by an..... ",
@@ -91,7 +91,7 @@ export default {
           isOpen: false,
           id: 1
         },
-         {
+        {
           imgs: items,
           title: "My first resume",
           introduce: "A resume prepared by an unhired programmer by an..... ",
@@ -99,7 +99,7 @@ export default {
           isOpen: false,
           id: 1
         },
-         {
+        {
           imgs: items,
           title: "My first resume",
           introduce: "A resume prepared by an unhired programmer by an..... ",
