@@ -31,7 +31,7 @@
           <p>Small white novice, high salary necessary</p>
           <p>This is where the success story begins</p>
         </div>
-        <div class="banner-play">
+        <div class="banner-play" @click.stop="GoOnline">
           <div class="play-txt">Create your resume online</div>
           <div class="play-btn"><i class="JS JS-into"></i></div>
         </div>
@@ -39,7 +39,7 @@
     </div>
     <!-- 广告图 移动端扩展 -->
     <div class="min-banner">
-      <div class="min-ban-play">
+      <div class="min-ban-play" @click.stop="GoOnline">
         <div class="min-play-txt">Create your resume online</div>
         <div class="min-play-btn"><i class="JS JS-into"></i></div>
       </div>
@@ -632,7 +632,7 @@
               <span>NewYork, us </span>
             </div>
           </div>
-          <div class="us-init">
+          <div class="us-init" @click.stop="GoConnect">
             <div class="init-txt">Click into</div>
             <i class="JS JS-into"></i>
           </div>
@@ -760,11 +760,11 @@ import copy2 from "@/assets/images/home/production/copy2.png";
 import copy3 from "@/assets/images/home/production/copy3.png";
 
 // 轮播图
-import "swiper/swiper.less";
-import "swiper/components/effect-fade/effect-fade.less";
-import "swiper/components/navigation/navigation.less";
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/swiper.less";
+import "swiper/components/navigation/navigation.less";
+import "swiper/components/effect-fade/effect-fade.less";
 SwiperCore.use([Navigation]);
 
 export default {
@@ -805,6 +805,12 @@ export default {
       }
       let dom = event.currentTarget;
       dom.classList.add("items-content-check");
+    },
+    GoOnline() {
+      this.$router.push("/other/online");
+    },
+    GoConnect() {
+      this.$router.push("/other/us");
     }
   }
 };
@@ -1016,7 +1022,7 @@ export default {
   }
   .model-content {
     position: relative;
-    padding-bottom: 60px; //
+    padding-bottom: 60px;
     .model-swiper {
       width: 95%;
       margin: 0 auto;
@@ -1051,6 +1057,11 @@ export default {
           height: 0.28125rem;
           background-color: #f3f5f5;
           border-radius: 50%;
+          position: absolute;
+          z-index: 8;
+          top: 0;
+          bottom: 0;
+          margin: auto;
         }
         .swiper-button-prev {
           left: 5px;
@@ -1067,6 +1078,11 @@ export default {
           font-family: "JS";
           font-size: 0.09375rem;
           color: #6b6d6f;
+        }
+        .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+            opacity: 0.35;
+            cursor: auto;
+            pointer-events: none;
         }
         .swiper-items {
           width: 1.510417rem;

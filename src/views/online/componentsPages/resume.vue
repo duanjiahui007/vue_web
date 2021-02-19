@@ -25,7 +25,21 @@
       <image-upload></image-upload>
     </div>
     <div class="online-next">
-      <a-button type="primary" :loading="loading" shape="round" class="NextBtn"
+      <a-button
+        :loading="loading"
+        shape="round"
+        class="defaultBtn"
+        @click.stop="last"
+        v-if="isVisted != 'isLast'"
+        >Last step</a-button
+      >
+      <a-button
+        type="primary"
+        :loading="loading"
+        shape="round"
+        class="NextBtn"
+        @click.stop="next"
+        v-if="isVisted != 'isNext'"
         >Next step</a-button
       >
     </div>
@@ -38,6 +52,7 @@ import E from "wangeditor";
 import I18next from "i18next";
 export default {
   name: "resume",
+  props: ["Num"],
   data() {
     return {
       // 富文本编辑
@@ -70,8 +85,27 @@ export default {
     this.editor.config.placeholder = "";
     this.editor.create();
   },
+  methods: {
+    last() {
+      this.$emit("last-step");
+    },
+    next() {
+      this.$emit("next-step");
+    }
+  },
   components: {
     ImageUpload
+  },
+  computed: {
+    isVisted() {
+      if (this.Num == 1) {
+        return "isLast";
+      } else if (this.Num == 6) {
+        return "isNext";
+      } else {
+        return null;
+      }
+    }
   },
   beforeUnmount() {
     this.editor.destroy();

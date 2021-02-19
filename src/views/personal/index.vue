@@ -60,8 +60,8 @@
     </div>
     <div class="user-resume">
       <form-work v-if="false"></form-work>
-      <show-view v-if="false"></show-view>
-      <show-views-two></show-views-two> 
+      <show-view v-if="true"></show-view>
+      <show-views-two v-if="false"></show-views-two>
     </div>
   </div>
 </template>

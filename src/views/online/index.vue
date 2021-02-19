@@ -3,14 +3,16 @@
     <div class="online-title">
       <time-axis :Num="Bnum"></time-axis>
     </div>
-
-    <a-button @click="next">前进</a-button>
-    <a-button @click="goBack">后退</a-button>
     <!-- <resume></resume>
     <basic></basic>
     <experience></experience> -->
     <keep-alive>
-      <component :is="isCompontent"></component>
+      <component
+        :is="isCompontent"
+        :Num="Bnum"
+        @nextStep="next"
+        @lastStep="goBack"
+      ></component>
     </keep-alive>
   </div>
 </template>
@@ -33,11 +35,13 @@ export default {
       if (this.Bnum > 1) {
         this.Bnum--;
       }
+      console.log(this.Bnum, "last");
     },
     next() {
       if (this.Bnum < 6) {
         this.Bnum++;
       }
+      console.log(this.Bnum, "next");
     }
   },
   components: {

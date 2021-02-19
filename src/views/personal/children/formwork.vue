@@ -1,29 +1,5 @@
 <template>
   <div class="form-work">
-    <!-- <div class="form-work-item">
-      <div class="form-work-item-img">
-        <img :src="items" alt="" />
-      </div>
-      <div class="form-work-item-introduce">
-        <h3>My first resume</h3>
-        <p>A resume prepared by an unhired programmer by an..... </p>
-      </div>
-      可用标志
-      <div class="form-work-item-usable">
-        Purchased
-      </div>
-      操作遮罩
-      <div class="form-work-item-mock" @click.stop >
-         <div class="form-work-item-mock-set">
-           <i class="JS JS-bianji"></i>
-           <i class="JS JS-fuzhixinzeng"></i>
-           <i class="JS JS-shanchu"></i>
-         </div>
-         <a-button shape="round" class="form-work-item-mock-btn">Download</a-button>
-         <a-button shape="round" class="form-work-item-mock-btn">Preview</a-button>
-         <a-button shape="round" class="form-work-item-mock-btn">Replace the template</a-button>
-      </div>
-    </div> -->
     <!-- 个体 -->
     <div
       class="form-work-item"

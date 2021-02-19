@@ -61,7 +61,7 @@
                   <span>Css</span>
                 </div>
                 <div class="item">
-                   <i>16%</i>
+                  <i>16%</i>
                   <span>Node</span>
                 </div>
                 <div class="item">
@@ -80,10 +80,8 @@
                 New title
               </div>
               <div class="view-is-user-cont">
-                I like drawing, dancing, climbing 
-                mountains, listening to music  
-                and good at singing, making 
-                speeches,playing basketball.
+                I like drawing, dancing, climbing mountains, listening to music
+                and good at singing, making speeches,playing basketball.
               </div>
             </div>
           </div>
@@ -248,26 +246,26 @@ export default {
                 width: 120px;
                 height: 120px;
                 bottom: 0;
-                &:nth-of-type(1){
+                &:nth-of-type(1) {
                   top: 6%;
-                  transform: scale(.6);
+                  transform: scale(0.6);
                 }
-                &:nth-of-type(2){
+                &:nth-of-type(2) {
                   left: 40%;
                   top: 0;
                   transform: scale(0.68);
                 }
-                &:nth-of-type(3){
+                &:nth-of-type(3) {
                   top: 40%;
                   left: -4%;
                   transform: scale(0.7);
                 }
-                &:nth-of-type(4){
-                  top:52%;
+                &:nth-of-type(4) {
+                  top: 52%;
                   left: 26%;
-                  transform: scale(.5);
+                  transform: scale(0.5);
                 }
-                &:nth-of-type(5){
+                &:nth-of-type(5) {
                   top: 31%;
                   left: 55%;
                   transform: scale(0.7);
@@ -275,9 +273,9 @@ export default {
                 &:nth-of-type(6) {
                   top: 61%;
                   left: 14%;
-                  transform: scale(.87);
+                  transform: scale(0.87);
                 }
-                &:nth-of-type(6){
+                &:nth-of-type(6) {
                   top: 77%;
                   left: -3%;
                   transform: scale(0.87);
@@ -289,30 +287,30 @@ export default {
                 }
               }
               .item {
-                background-color: rgba(61, 106, 209,.7);
+                background-color: rgba(61, 106, 209, 0.7);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 color: #ffffff;
-                i{
-                  font-size:14px;
+                i {
+                  font-size: 14px;
                   margin-bottom: 5px;
                 }
-                span{
+                span {
                   font-size: 15px;
                 }
-                &:nth-last-of-type(1){
+                &:nth-last-of-type(1) {
                   top: 12%;
                   left: 10%;
                   transform: scale(0.64);
                 }
-                &:nth-last-of-type(2){
+                &:nth-last-of-type(2) {
                   top: 10%;
                   right: 2%;
                   transform: scale(0.67);
                 }
-                &:nth-last-of-type(3){
+                &:nth-last-of-type(3) {
                   top: 38%;
                   right: -3%;
                   transform: scale(0.67);
@@ -320,14 +318,14 @@ export default {
                 &:nth-last-of-type(4) {
                   top: 52%;
                   left: -4%;
-                  transform: scale(0.5)
+                  transform: scale(0.5);
                 }
                 &:nth-last-of-type(5) {
                   bottom: 32%;
                   right: 30%;
                   transform: scale(0.67);
                 }
-                &:nth-last-of-type(6){
+                &:nth-last-of-type(6) {
                   transform: scale(0.7);
                   right: 25%;
                   bottom: -3%;

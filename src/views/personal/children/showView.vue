@@ -24,7 +24,7 @@
       </div>
       <div class="view-document">
         <div class="view-document-basis">
-          <img src="" alt="author" class="portrait" />
+          <img :src="image" alt="author" class="portrait" />
           <div class="basis-information basis">
             <h3 class="title">基本信息</h3>
             <div class="age">
@@ -170,10 +170,12 @@ import love1 from "@/assets/images/remover/01.png";
 import love2 from "@/assets/images/remover/02.png";
 import love3 from "@/assets/images/remover/03.png";
 import love4 from "@/assets/images/remover/04.png";
+
+import image from "../../../assets/images/home/userUs/av.jpg";
 export default {
   name: "showView",
   data() {
-    return { love1, love2, love3, love4 };
+    return { love1, love2, love3, love4 ,image};
   }
 };
 </script>

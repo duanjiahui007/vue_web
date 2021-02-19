@@ -237,6 +237,25 @@
       </div>
     </div>
   </div>
+  <div class="online-next">
+    <a-button
+      :loading="loading"
+      shape="round"
+      class="defaultBtn"
+      @click.stop="last"
+      v-if="isVisted != 'isLast'"
+      >Last step</a-button
+    >
+    <a-button
+      type="primary"
+      :loading="loading"
+      shape="round"
+      class="NextBtn"
+      @click.stop="next"
+      v-if="isVisted != 'isNext'"
+      >Next step</a-button
+    >
+  </div>
 </template>
 
 <script>
@@ -251,6 +270,7 @@ import {
 } from "@ant-design/icons-vue";
 export default {
   name: "experience",
+  props: ["Num"],
   data() {
     return {
       work: [
@@ -474,6 +494,23 @@ export default {
       // if(client > ClientHeight){
 
       // }
+    },
+    last() {
+      this.$emit("last-step");
+    },
+    next() {
+      this.$emit("next-step");
+    }
+  },
+  computed: {
+    isVisted() {
+      if (this.Num == 1) {
+        return "isLast";
+      } else if (this.Num == 6) {
+        return "isNext";
+      } else {
+        return null;
+      }
     }
   },
   components: {
@@ -492,6 +529,14 @@ export default {
 @import "./less/public.less";
 .experience {
   position: relative;
+}
+.online-next {
+  position: relative;
+  z-index: 888;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ex-item {
   background-color: #ffffff;

@@ -30,7 +30,7 @@
         <router-link to="/other/personal">personal center</router-link>
       </div>
       <div class="menu" :class="{ onSelect: 'us' === isPath }" data-path="us">
-        <router-link to="/other/us">connert us</router-link>
+        <router-link to="/other/us">connect us</router-link>
       </div>
       <div class="line" ref="lines"></div>
     </nav>

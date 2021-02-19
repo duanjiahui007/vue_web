@@ -64,10 +64,21 @@
       </a-form>
     </div>
     <div class="online-next">
-      <a-button :loading="loading" shape="round" class="defaultBtn"
+      <a-button
+        :loading="loading"
+        shape="round"
+        class="defaultBtn"
+        @click.stop="last"
+        v-if="isVisted != 'isLast'"
         >Last step</a-button
       >
-      <a-button type="primary" :loading="loading" shape="round" class="NextBtn"
+      <a-button
+        type="primary"
+        :loading="loading"
+        shape="round"
+        class="NextBtn"
+        @click.stop="next"
+        v-if="isVisted != 'isNext'"
         >Next step</a-button
       >
     </div>
@@ -81,6 +92,7 @@ import { LinkOutlined, CloseOutlined } from "@ant-design/icons-vue";
 
 export default {
   name: "basic",
+  props: ["Num"],
   data() {
     return {
       loading: false,
@@ -153,6 +165,23 @@ export default {
     },
     delHttpData(index) {
       this.dataHttp.splice(index, 1);
+    },
+    last() {
+      this.$emit("last-step");
+    },
+    next() {
+      this.$emit("next-step");
+    }
+  },
+  computed: {
+    isVisted() {
+      if (this.Num == 1) {
+        return "isLast";
+      } else if (this.Num == 6) {
+        return "isNext";
+      } else {
+        return null;
+      }
     }
   },
   components: {
