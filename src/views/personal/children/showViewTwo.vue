@@ -1,11 +1,12 @@
 <template>
   <div class="view-box">
     <div class="nav-min">
-      <span class="menu-one">Preview</span>
+      <router-link class="menu-one" to="">Preview</router-link>
       <i>>>></i>
       <span>My first resume</span>
     </div>
     <div class="view-content">
+      <color-select></color-select>
       <div class="view-is-resume">
         <div class="view-is-head">
           <div class="phone"><i class="JS JS-phone"></i> 18622487752</div>
@@ -86,7 +87,122 @@
             </div>
           </div>
           <div class="view-is-right">
-            <div class="view-is-item"></div>
+            <!-- 基本资料 -->
+            <div class="view-is-item">
+              <div class="line">
+                <div class="line-bar"></div>
+              </div>
+              <div class="view-is-item-t view-is-item-c">
+                <i class="JS JS-myself"></i>
+                <div class="title">Bansic information</div>
+              </div>
+              <div class="view-is-item-a view-is-item-c">
+                <div class="bar"></div>
+                <div class="top">Personal Introduction</div>
+                <div class="txt">
+                  I am a person who works hard, studies hard and has the courage to innovate.
+                  I can skillfully use computer and master basic office software. Understand AE,HTML code,CSS+DIV architecture design, understand the use of HTML5+CSS3.
+                </div>
+              </div>
+              <div class="view-is-item-a view-is-item-c">
+                <div class="bar"></div>
+                <div class="top">Place of birth</div>
+                <div class="txt">
+                 ShiFan Residential Quarter,FengTai District
+                </div>
+              </div>
+              <div class="view-is-item-a view-is-item-c">
+                <div class="bar"></div>
+                <div class="top">Personal homepage</div>
+                <div class="txt">
+                  <a href="#">http://114.116.21.206/park</a>
+                  <a href="#">http://114.116.21.206/park</a>
+                  <a href="#">http://114.116.21.206/park</a>
+                </div>
+              </div>
+            </div>
+            <!-- 工作经历 -->
+            <div class="view-is-item">
+              <div class="line">
+                <div class="line-bar"></div>
+              </div>
+              <div class="view-is-item-t view-is-item-c">
+                <i class="JS JS-work"></i>
+                <div class="title">Work experience</div>
+              </div>
+              <div class="view-is-item-a view-is-item-c">
+                <div class="bar"></div>
+                <div class="top">Bank of China <span class="time">2018.07-2020.09</span></div>
+                <div class="txt">
+                  <h4>UI designer</h4>
+                  <ul>
+                    <li>Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.</li>
+                    <li>Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="view-is-item-a view-is-item-c">
+                <div class="bar"></div>
+                <div class="top">Place of birth <span class="time">2018.07-2020.09</span></div>
+                <div class="txt">
+                  <h4>UI designer</h4>
+                  <ul>
+                    <li>Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.</li>
+                    <li>Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="view-is-item-a view-is-item-c">
+                <div class="bar"></div>
+                <div class="top">Personal homepage <span class="time">2018.07-2020.09</span></div>
+                <div class="txt">
+                  <h4>UI designer</h4>
+                  <ul>
+                    <li>Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.</li>
+                    <li>Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.</li>
+                  </ul>
+                </div>
+              </div>
+              
+            </div>
+            <!-- 教育经历 -->
+            <div class="view-is-item">
+              <div class="line">
+                <div class="line-bar"></div>
+              </div>
+              <div class="view-is-item-t view-is-item-c">
+                <i class="JS JS-edu"></i>
+                <div class="title">Education experience</div>
+              </div>
+              <div class="view-is-item-a view-is-item-c">
+                <div class="bar"></div>
+                <div class="top">Bank of China <span class="time">2018.07-2020.09</span></div>
+                <div class="txt">
+                  <span>Major:</span>
+                  Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.
+                  Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.
+                </div>
+              </div>
+              <div class="view-is-item-a view-is-item-c">
+                <div class="bar"></div>
+                <div class="top">Place of birth <span class="time">2018.07-2020.09</span></div>
+                <div class="txt">
+                  <span>Major:</span>
+                  Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.
+                  Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.
+                </div>
+              </div>
+              <div class="view-is-item-a view-is-item-c">
+                <div class="bar"></div>
+                <div class="top">Personal homepage <span class="time">2018.07-2020.09</span></div>
+                <div class="txt">
+                  <span>Major:</span>
+                  Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.
+                  Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.
+                </div>
+              </div>
+              
+            </div>
           </div>
         </div>
       </div>
@@ -96,6 +212,8 @@
 
 <script>
 import image from "../../../assets/images/home/userUs/av.jpg";
+// 颜色选择器
+import colorSelect from "../css/components/colorSelect"
 export default {
   name: "viewBox",
   data() {
@@ -103,7 +221,8 @@ export default {
       image
     };
   },
-  methods: {}
+  methods:{},
+  components:{colorSelect}
 };
 </script>
 
@@ -335,7 +454,122 @@ export default {
           }
         }
         .view-is-right {
+          flex: 1;
           padding: 20px;
+          .view-is-item {
+            margin-bottom: 34px;
+            padding: 0 0 0 60px;
+            position: relative;
+            &:nth-last-of-type(1){
+              margin-bottom: 0;
+            }
+            &::after{
+              content: '';
+              display: table;
+            }
+            .line {
+              position: absolute;
+              left: 30px;
+              bottom: 0;
+              height: 100%;
+              border-left: 1px dashed #cdd5e8;
+              .line-bar {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #5a75b4;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translateX(-50%);
+              }
+            }
+            .view-is-item-c {
+              position: relative;
+              z-index: 8;
+              margin-bottom: 25px;
+              &:nth-last-of-type(1){
+                margin-bottom: 0;
+              }
+              .JS {
+                position: absolute;
+                left: -30px;
+                transform: translateX(-50%);
+                top: 0;
+                color: #ffffff;
+                background-color: #5c7cc6;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                line-height: 25px;
+                text-align: center;
+                box-shadow: 0 0 2px 5px #e7e7e7;
+              }
+              .title {
+                font-size: 14px;
+                color: #8091b7;
+                height: 25px;
+                line-height: 25px;
+                border-radius: 30px;
+                padding: 0 10px;
+                border: 1px solid #d1d8ea;
+                display: inline-block;
+              }
+            }
+            .view-is-item-a {
+              .bar{
+                width: 10px;
+                height: 10px;
+                padding: 3px;
+                border-radius: 50%;
+                border: 1px dashed #5a75b4;
+                background-color: #5a75b4;
+                background-clip: content-box;
+                box-sizing: content-box;
+                position: absolute;
+                left: -30px;
+                transform: translateX(-50%);
+                top: 0;
+              }
+              .top{
+                  color: #4863a2;
+                  font-size: 15px;
+                  font-weight: bold;
+                  line-height: 20px;
+                  margin-bottom: 10px;
+                  .time {
+                    font-size: 14px;
+                    color: #7a86a0;
+                    font-weight: normal;
+                    margin-left: 14px;
+                  }
+              }
+              .txt {
+                font-size: 14px;
+                color: #565656;
+                line-height: 22px;
+                h4{
+                  font-weight: 15px;
+                  color: #f7bf59;
+                  margin-bottom: 15px;
+                }
+                a {
+                  color: #f7bf59;
+                  border-bottom: 1px solid #f7bf59;
+                  display: inline-block;
+                  font-size: 14px;
+                  margin-right: 20px;
+                }
+                ul {
+                  list-style:decimal inside;
+                }
+                span {
+                  color: #f7bf59;
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
         }
       }
     }

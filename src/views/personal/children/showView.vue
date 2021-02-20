@@ -6,22 +6,7 @@
       <span>My first resume</span>
     </div>
     <div class="view-box">
-      <div class="view-document-color">
-        <div class="color-board">
-          <i style="background-color:	#FFB6C1"></i>
-          <i style="background-color:	#DC143C"></i>
-          <i style="background-color:	#FF00FF"></i>
-          <i style="background-color:	#7B68EE"></i>
-          <i style="background-color:	#4169E1"></i>
-          <i style="background-color:	#00FFFF"></i>
-          <i style="background-color:	#00CED1"></i>
-          <i style="background-color:	#7FFFAA"></i>
-          <i style="background-color:	#3CB371"></i>
-          <i style="background-color:	#68a868"></i>
-          <i style="background-color:	#006400"></i>
-        </div>
-        <a-button type="danger" shape="round">Finished</a-button>
-      </div>
+      <color-select></color-select>
       <div class="view-document">
         <div class="view-document-basis">
           <img :src="image" alt="author" class="portrait" />
@@ -171,16 +156,21 @@ import love2 from "@/assets/images/remover/02.png";
 import love3 from "@/assets/images/remover/03.png";
 import love4 from "@/assets/images/remover/04.png";
 
+// 颜色选择器
+import colorSelect from "../css/components/colorSelect"
+
 import image from "../../../assets/images/home/userUs/av.jpg";
 export default {
   name: "showView",
   data() {
-    return { love1, love2, love3, love4 ,image};
-  }
+    return { love1, love2, love3, love4, image };
+  },
+  components:{colorSelect}
 };
 </script>
 
 <style lang="less" scoped>
+@import '../css/public.less';
 .showView {
   > .nav-min {
     display: flex;
@@ -204,25 +194,25 @@ export default {
     box-shadow: 0 0 20px 5px #e5e5e5;
     padding: 27px 20px;
     background-color: #ffffff;
-    .view-document-color {
-      margin-bottom: 14px;
-      display: flex;
-      justify-content: space-between;
-      .color-board {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-basis: 80%;
-        border: 1px solid #e3e3e3;
-        border-radius: 4px;
-        i {
-          height: 18px;
-          width: 18px;
-          border-radius: 50%;
-          cursor: pointer;
-        }
-      }
-    }
+    // .view-document-color {
+    //   margin-bottom: 14px;
+    //   display: flex;
+    //   justify-content: space-between;
+    //   .color-board {
+    //     display: flex;
+    //     justify-content: space-around;
+    //     align-items: center;
+    //     flex-basis: 80%;
+    //     border: 1px solid #e3e3e3;
+    //     border-radius: 4px;
+    //     i {
+    //       height: 18px;
+    //       width: 18px;
+    //       border-radius: 50%;
+    //       cursor: pointer;
+    //     }
+    //   }
+    // }
     .view-document {
       border: 1px solid #d5d6d7;
       display: flex;

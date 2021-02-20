@@ -60,8 +60,9 @@
     </div>
     <div class="user-resume">
       <form-work v-if="false"></form-work>
-      <show-view v-if="true"></show-view>
-      <show-views-two v-if="false"></show-views-two>
+      <show-view v-if="false"></show-view>
+      <show-view-two v-if="false"></show-view-two>
+      <show-view-three v-if="true"></show-view-three>
     </div>
   </div>
 </template>
@@ -76,7 +77,9 @@ import formWork from "./children/formwork.vue";
 // 模板预览1
 import showView from "./children/showView.vue";
 // 模板预览2
-import showViewsTwo from "./children/showViewTwo.vue";
+import showViewTwo from "./children/showViewTwo.vue";
+// 模板预览3
+import showViewThree from "./children/showViewThree.vue"
 
 export default {
   name: "personal",
@@ -99,7 +102,8 @@ export default {
     avatarUpload,
     formWork,
     showView,
-    showViewsTwo
+    showViewTwo,
+    showViewThree,
   },
   methods: {
     // 开始编辑个人信息

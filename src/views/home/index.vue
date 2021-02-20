@@ -1079,10 +1079,11 @@ export default {
           font-size: 0.09375rem;
           color: #6b6d6f;
         }
-        .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
-            opacity: 0.35;
-            cursor: auto;
-            pointer-events: none;
+        .swiper-button-prev.swiper-button-disabled,
+        .swiper-button-next.swiper-button-disabled {
+          opacity: 0.35;
+          cursor: auto;
+          pointer-events: none;
         }
         .swiper-items {
           width: 1.510417rem;
