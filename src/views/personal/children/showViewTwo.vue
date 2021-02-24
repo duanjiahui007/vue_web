@@ -100,15 +100,17 @@
                 <div class="bar"></div>
                 <div class="top">Personal Introduction</div>
                 <div class="txt">
-                  I am a person who works hard, studies hard and has the courage to innovate.
-                  I can skillfully use computer and master basic office software. Understand AE,HTML code,CSS+DIV architecture design, understand the use of HTML5+CSS3.
+                  I am a person who works hard, studies hard and has the courage
+                  to innovate. I can skillfully use computer and master basic
+                  office software. Understand AE,HTML code,CSS+DIV architecture
+                  design, understand the use of HTML5+CSS3.
                 </div>
               </div>
               <div class="view-is-item-a view-is-item-c">
                 <div class="bar"></div>
                 <div class="top">Place of birth</div>
                 <div class="txt">
-                 ShiFan Residential Quarter,FengTai District
+                  ShiFan Residential Quarter,FengTai District
                 </div>
               </div>
               <div class="view-is-item-a view-is-item-c">
@@ -132,38 +134,67 @@
               </div>
               <div class="view-is-item-a view-is-item-c">
                 <div class="bar"></div>
-                <div class="top">Bank of China <span class="time">2018.07-2020.09</span></div>
+                <div class="top">
+                  Bank of China <span class="time">2018.07-2020.09</span>
+                </div>
                 <div class="txt">
                   <h4>UI designer</h4>
                   <ul>
-                    <li>Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.</li>
-                    <li>Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.</li>
+                    <li>
+                      Engaged in graphic design,web design,UI design and other
+                      related work for more than 3 years,with rich design
+                      experience and marture work cases.
+                    </li>
+                    <li>
+                      Familiar with mobile UI design specifications and
+                      trends,good at working with upstream and
+                      downstream,understand the basic product flow.
+                    </li>
                   </ul>
                 </div>
               </div>
               <div class="view-is-item-a view-is-item-c">
                 <div class="bar"></div>
-                <div class="top">Place of birth <span class="time">2018.07-2020.09</span></div>
+                <div class="top">
+                  Place of birth <span class="time">2018.07-2020.09</span>
+                </div>
                 <div class="txt">
                   <h4>UI designer</h4>
                   <ul>
-                    <li>Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.</li>
-                    <li>Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.</li>
+                    <li>
+                      Engaged in graphic design,web design,UI design and other
+                      related work for more than 3 years,with rich design
+                      experience and marture work cases.
+                    </li>
+                    <li>
+                      Familiar with mobile UI design specifications and
+                      trends,good at working with upstream and
+                      downstream,understand the basic product flow.
+                    </li>
                   </ul>
                 </div>
               </div>
               <div class="view-is-item-a view-is-item-c">
                 <div class="bar"></div>
-                <div class="top">Personal homepage <span class="time">2018.07-2020.09</span></div>
+                <div class="top">
+                  Personal homepage <span class="time">2018.07-2020.09</span>
+                </div>
                 <div class="txt">
                   <h4>UI designer</h4>
                   <ul>
-                    <li>Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.</li>
-                    <li>Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.</li>
+                    <li>
+                      Engaged in graphic design,web design,UI design and other
+                      related work for more than 3 years,with rich design
+                      experience and marture work cases.
+                    </li>
+                    <li>
+                      Familiar with mobile UI design specifications and
+                      trends,good at working with upstream and
+                      downstream,understand the basic product flow.
+                    </li>
                   </ul>
                 </div>
               </div>
-              
             </div>
             <!-- 教育经历 -->
             <div class="view-is-item">
@@ -176,32 +207,46 @@
               </div>
               <div class="view-is-item-a view-is-item-c">
                 <div class="bar"></div>
-                <div class="top">Bank of China <span class="time">2018.07-2020.09</span></div>
+                <div class="top">
+                  Bank of China <span class="time">2018.07-2020.09</span>
+                </div>
                 <div class="txt">
                   <span>Major:</span>
-                  Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.
-                  Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.
+                  Engaged in graphic design,web design,UI design and other
+                  related work for more than 3 years,with rich design experience
+                  and marture work cases. Familiar with mobile UI design
+                  specifications and trends,good at working with upstream and
+                  downstream,understand the basic product flow.
                 </div>
               </div>
               <div class="view-is-item-a view-is-item-c">
                 <div class="bar"></div>
-                <div class="top">Place of birth <span class="time">2018.07-2020.09</span></div>
+                <div class="top">
+                  Place of birth <span class="time">2018.07-2020.09</span>
+                </div>
                 <div class="txt">
                   <span>Major:</span>
-                  Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.
-                  Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.
+                  Engaged in graphic design,web design,UI design and other
+                  related work for more than 3 years,with rich design experience
+                  and marture work cases. Familiar with mobile UI design
+                  specifications and trends,good at working with upstream and
+                  downstream,understand the basic product flow.
                 </div>
               </div>
               <div class="view-is-item-a view-is-item-c">
                 <div class="bar"></div>
-                <div class="top">Personal homepage <span class="time">2018.07-2020.09</span></div>
+                <div class="top">
+                  Personal homepage <span class="time">2018.07-2020.09</span>
+                </div>
                 <div class="txt">
                   <span>Major:</span>
-                  Engaged in graphic design,web design,UI design and other related work for more than 3 years,with rich design experience and marture work cases.
-                  Familiar with mobile UI design specifications and trends,good at working with upstream and downstream,understand the basic product flow.
+                  Engaged in graphic design,web design,UI design and other
+                  related work for more than 3 years,with rich design experience
+                  and marture work cases. Familiar with mobile UI design
+                  specifications and trends,good at working with upstream and
+                  downstream,understand the basic product flow.
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
@@ -213,7 +258,7 @@
 <script>
 import image from "../../../assets/images/home/userUs/av.jpg";
 // 颜色选择器
-import colorSelect from "../css/components/colorSelect"
+import colorSelect from "../css/components/colorSelect";
 export default {
   name: "viewBox",
   data() {
@@ -221,8 +266,8 @@ export default {
       image
     };
   },
-  methods:{},
-  components:{colorSelect}
+  methods: {},
+  components: { colorSelect }
 };
 </script>
 
@@ -460,11 +505,11 @@ export default {
             margin-bottom: 34px;
             padding: 0 0 0 60px;
             position: relative;
-            &:nth-last-of-type(1){
+            &:nth-last-of-type(1) {
               margin-bottom: 0;
             }
-            &::after{
-              content: '';
+            &::after {
+              content: "";
               display: table;
             }
             .line {
@@ -488,7 +533,7 @@ export default {
               position: relative;
               z-index: 8;
               margin-bottom: 25px;
-              &:nth-last-of-type(1){
+              &:nth-last-of-type(1) {
                 margin-bottom: 0;
               }
               .JS {
@@ -517,7 +562,7 @@ export default {
               }
             }
             .view-is-item-a {
-              .bar{
+              .bar {
                 width: 10px;
                 height: 10px;
                 padding: 3px;
@@ -531,24 +576,24 @@ export default {
                 transform: translateX(-50%);
                 top: 0;
               }
-              .top{
-                  color: #4863a2;
-                  font-size: 15px;
-                  font-weight: bold;
-                  line-height: 20px;
-                  margin-bottom: 10px;
-                  .time {
-                    font-size: 14px;
-                    color: #7a86a0;
-                    font-weight: normal;
-                    margin-left: 14px;
-                  }
+              .top {
+                color: #4863a2;
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 20px;
+                margin-bottom: 10px;
+                .time {
+                  font-size: 14px;
+                  color: #7a86a0;
+                  font-weight: normal;
+                  margin-left: 14px;
+                }
               }
               .txt {
                 font-size: 14px;
                 color: #565656;
                 line-height: 22px;
-                h4{
+                h4 {
                   font-weight: 15px;
                   color: #f7bf59;
                   margin-bottom: 15px;
@@ -561,7 +606,7 @@ export default {
                   margin-right: 20px;
                 }
                 ul {
-                  list-style:decimal inside;
+                  list-style: decimal inside;
                 }
                 span {
                   color: #f7bf59;

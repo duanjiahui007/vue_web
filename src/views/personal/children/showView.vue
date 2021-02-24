@@ -7,7 +7,7 @@
     </div>
     <div class="view-box">
       <color-select></color-select>
-      <div class="view-document">
+      <div class="view-document" id="pdfDom" @click="print">
         <div class="view-document-basis">
           <img :src="image" alt="author" class="portrait" />
           <div class="basis-information basis">
@@ -157,20 +157,26 @@ import love3 from "@/assets/images/remover/03.png";
 import love4 from "@/assets/images/remover/04.png";
 
 // 颜色选择器
-import colorSelect from "../css/components/colorSelect"
+import colorSelect from "../css/components/colorSelect";
 
 import image from "../../../assets/images/home/userUs/av.jpg";
+
 export default {
   name: "showView",
   data() {
-    return { love1, love2, love3, love4, image };
+    return { love1, love2, love3, love4, image, htmlTitle: "xxx" };
   },
-  components:{colorSelect}
+  components: { colorSelect },
+  methods: {
+    print() {
+      this.$getPdf();
+    }
+  }
 };
 </script>
 
 <style lang="less" scoped>
-@import '../css/public.less';
+@import "../css/public.less";
 .showView {
   > .nav-min {
     display: flex;

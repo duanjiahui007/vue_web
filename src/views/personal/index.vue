@@ -62,7 +62,8 @@
       <form-work v-if="false"></form-work>
       <show-view v-if="false"></show-view>
       <show-view-two v-if="false"></show-view-two>
-      <show-view-three v-if="true"></show-view-three>
+      <show-view-three v-if="false"></show-view-three>
+      <show-view-four v-if="false"></show-view-four>
     </div>
   </div>
 </template>
@@ -79,7 +80,9 @@ import showView from "./children/showView.vue";
 // 模板预览2
 import showViewTwo from "./children/showViewTwo.vue";
 // 模板预览3
-import showViewThree from "./children/showViewThree.vue"
+import showViewThree from "./children/showViewThree.vue";
+// 模板预览4
+import showViewFour from "./children/showViewFour.vue";
 
 export default {
   name: "personal",
@@ -104,6 +107,7 @@ export default {
     showView,
     showViewTwo,
     showViewThree,
+    showViewFour
   },
   methods: {
     // 开始编辑个人信息

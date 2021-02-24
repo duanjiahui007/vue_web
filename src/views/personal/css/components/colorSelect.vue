@@ -19,13 +19,12 @@
 
 <script>
 export default {
-  name:'color-select',
-  data(){
-    return {}
+  name: "color-select",
+  data() {
+    return {};
   },
-  methods:{},
-
-}
+  methods: {}
+};
 </script>
 
 <style lang="less" scoped>
